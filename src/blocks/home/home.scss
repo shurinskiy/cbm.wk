@@ -1,0 +1,29 @@
+.home {
+	$self: &;
+	box-sizing: border-box;
+	background-color: #387381;
+	
+	&__slider {
+		height: 100vh;
+		
+		&.swiper {
+			
+			.swiper-wrapper {
+				height: 100%;
+			}
+		}
+	}
+	
+	&__page {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: #fff;
+	}
+
+	&__content {
+		max-width: 700px;
+	}
+
+}

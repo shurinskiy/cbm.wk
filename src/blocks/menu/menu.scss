@@ -1,0 +1,20 @@
+.menu {
+	$self: &;
+
+	&__item {
+
+		&_haschild {
+			
+		}
+	}
+
+	&__link {
+		color: #fff;
+		text-transform: uppercase;
+		text-decoration: none;
+	}
+
+	&__submenu {
+
+	}
+}

@@ -1,0 +1,83 @@
+.header {
+	$self: &;
+	box-sizing: border-box;
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+
+	&__inner {
+		display: flex;
+	}
+
+	&__logo {
+
+	}
+
+	&__navi {
+		display: flex;
+		align-items: center;
+	}
+
+	&__navi-link {
+		white-space: nowrap;
+		padding: 10px;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #fff;
+	}
+
+	&__menu-toggle {
+		@extend %reset-button;
+		margin-left: auto;
+		background-color: rgba(0, 0, 0, 0.75);
+		color: #fff;
+		text-transform: uppercase;
+		white-space: nowrap;
+		padding: 10px 30px;
+		border-radius: 100px;
+		cursor: pointer;
+		position: relative;
+		z-index: 4;
+
+		span:nth-child(1) {
+			display: none;
+		}
+
+		&.opened {
+			background-color: #000;
+
+			span:nth-child(1) {
+				display: block;
+			}
+			
+			span:nth-child(2) {
+				display: none;
+			}
+		}
+	}
+
+	&__menu-blind {
+
+	}
+
+	&__menu {
+		box-sizing: border-box;
+		display: flex;
+		flex-flow: column nowrap;
+		position: fixed;
+		height: 100vh;
+		z-index: 3;
+		right: -500px; top: 0;
+		max-width: 500px;
+		width: 100%;
+		padding: 40px 20px 30px;
+		margin: 0;
+		background-color: #22415e;
+		transition: right 0.3s ease-in;
+		overflow: auto;
+		
+		&.opened {
+			right: 0;
+		}
+	}
+}
