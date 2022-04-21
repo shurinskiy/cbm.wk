@@ -43,6 +43,7 @@
 
 	&__menu-toggle {
 		@extend %reset-button;
+		flex-shrink: 0;
 		margin-left: auto;
 		font-family: "MSB", sans-serif;
 		font-size: 15px;

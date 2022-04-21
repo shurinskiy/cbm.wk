@@ -21,6 +21,25 @@ import scrollLock from 'scroll-lock';
 		scrollLock.enablePageScroll();
 	});
 
+	$('.menu__item_haschild > a').on('click', function(e) {
+		let $here = $(this).parent().find('.menu__submenu');
+		
+		if ($shell.css('position') == 'fixed') {
+			e.stopPropagation();
+			e.preventDefault();
+
+			$('.menu__submenu:visible').not($here).slideUp();
+			$here.slideToggle();
+		}
+	});
+
+	
+	$(window).on('resize', function(e) {
+		if($shell.not('.opened').length)
+			$('.menu__submenu').removeAttr('style');
+	});
+
+
 	$(window).on('click', function(e) {
 		if($shell.hasClass('opened') && !e.target.closest('.header__menu-blind')) {
 			e.preventDefault();
