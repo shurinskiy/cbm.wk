@@ -1,7 +1,7 @@
 import scrollLock from 'scroll-lock';
 
 (() => {
-	const $shell = $('.header__menu');
+	const $shell = $('.header__menu-blind');
 	const $toggle = $('.header__menu-toggle');
 
 	$toggle.on('click', function(e) {
@@ -22,7 +22,7 @@ import scrollLock from 'scroll-lock';
 	});
 
 	$(window).on('click', function(e) {
-		if($shell.hasClass('opened') && !e.target.closest('.header__menu')) {
+		if($shell.hasClass('opened') && !e.target.closest('.header__menu-blind')) {
 			e.preventDefault();
 			$toggle.toggleClass('opened');
 			$shell.toggleClass('opened').removeAttr('style');

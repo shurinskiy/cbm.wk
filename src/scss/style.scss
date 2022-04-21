@@ -39,7 +39,16 @@ $breakpoints: (
 	// "../../node_modules/animate-scss/_zooming-entrances/zooming-entrances.scss";
 
 
-// @include font-face("Roboto-Black", "RBBL");
+	@include font-face("GothamPro-Black", "GBL");
+	@include font-face("Raleway-Black", "RWBL");
+	@include font-face("Montserrat-Regular", "MR"); // Decimal
+	@include font-face("Montserrat-Bold", "MB"); // Decimal
+	@include font-face("Montserrat-Black", "MBL"); // Decimal
+	@include font-face("Montserrat-SemiBold", "MSB"); // Decimal
+	@include font-face("Roboto-Light", "RBL"); // Helvetica
+	@include font-face("Roboto-Bold", "RBB"); // Helvetica
+
+
 @import "../../node_modules/swiper/swiper";
 
 // Import BEM blocks scss
@@ -49,8 +58,8 @@ body, html {
 	box-sizing: border-box;
 	font-size: #{$basesize}px;
 	line-height: 1.2;
-	font-family: sans-serif;
-	background-color: #fafafa;
+	font-family: "RBL", sans-serif;
+	// background-color: #fafafa;
 	min-height: 100vh;
 	display: flex;
 	flex-flow: column nowrap;
