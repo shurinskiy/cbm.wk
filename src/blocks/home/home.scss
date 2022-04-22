@@ -36,10 +36,11 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center right;
-
+		
 		@include media('<=md') {
-			height: auto;
+			height: auto !important;
 			display: block;
+			padding: 120px 20px;
 		}
 
 		&_first {
@@ -256,6 +257,10 @@
 				@include media('<=lg') {
 					align-self: center;
 				}
+	
+				@include media('<=md') {
+					max-width: none;
+				}
 			}
 
 			#{$self}__side-boxes {
@@ -278,13 +283,22 @@
 				@include media('<=xlg') {
 					width: 100%;
 				}
+				
+				@include media('<=md') {
+					width: 50%;
+				}
 
 				&:nth-child(1) {
 					border-right: 1px solid rgba(255, 255, 255, 0.1);
 					
 					@include media('<=xlg') {
-						bottom: none;
+						border: none;
 						border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+					}
+					
+					@include media('<=md') {
+						border: none;
+						border-right: 1px solid rgba(255, 255, 255, 0.1);
 					}
 				}
 
