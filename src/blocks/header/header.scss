@@ -4,10 +4,16 @@
 	position: fixed;
 	z-index: 2;
 	width: 100%;
+	transition: background-color 0.3s;
+
+	&_filled {
+		background-color: rgba(0, 0, 0, 0.7);
+		box-shadow: 0 4px 60px rgba(0, 0, 0, 0.2);
+	}
 	
 	&__inner {
 		display: flex;
-		min-height: 95px;
+		min-height: 90px;
 		align-items: center;
 	}
 

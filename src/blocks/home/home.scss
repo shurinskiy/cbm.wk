@@ -31,7 +31,7 @@
 		height: 100%;
 		display: flex;
 		align-items: center;
-		padding: 115px 20px 20px 40px;
+		padding: 110px 20px 20px 40px;
 		color: #fff;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -44,6 +44,11 @@
 		}
 
 		&_first {
+
+			@include media('<=md') {
+				padding: 200px 20px 60px;
+			}
+
 			#{$self}__main {
 				margin-left: 9%;
 				max-width: 465px;
@@ -51,14 +56,29 @@
 				@include media('<=xlg') {
 					margin: 0;				
 				}
+
+				@include media('<=md') {
+					max-width: none;
+					margin-bottom: 80px;
+				}
+			}
+
+			#{$self}__text {
+				
+				@include media('<=md') {
+					max-width: 500px;
+				}
 			}
 
 			#{$self}__side {
 				max-width: 270px;
 				margin: 0 -20px 0 auto;
-
+				
 				@include media('<=md') {
 					margin: 0;
+					display: flex;
+					flex-wrap: wrap;
+					max-width: none;
 				}
 			}
 
@@ -69,6 +89,10 @@
 				align-content: center;
 				min-height: 150px;
 				position: relative;
+
+				@include media('<=md') {
+					width: 50%;
+				}
 
 				span:nth-child(1) {
 					display: block;
@@ -95,27 +119,49 @@
 					position: absolute;
 					bottom: 0;
 					right: 0;
+					
+					@include media('<=md') {
+						right: auto;
+						left: 0;
+					}
 				}
 			}
 		}
 
 		&_second {
+
 			#{$self}__main {
 				margin-left: 9%;
-				max-width: 465px;
 
 				@include media('<=xlg') {
 					margin: 0;
+				}
+				
+				@include media('<=md') {
+					max-width: none;
+					margin-bottom: 100px;
 				}
 			}
 
 			#{$self}__title {
 				max-width: 380px;
+				
+				@include media('<=md') {
+					max-width: 600px;
+				}
+			}
+
+			#{$self}__text {
+				max-width: 465px;
 			}
 
 			#{$self}__side {
 				margin: 12% 0 0 70px;
 				border-left: 1px solid #fff;
+				
+				@include media('<=md') {
+					margin: 0;
+				}
 			}
 
 			#{$self}__side-link {
@@ -199,6 +245,10 @@
 				@include media('<=xlg') {
 					min-width: 550px;
 					margin-left: 0;
+				}
+				
+				@include media('<=md') {
+					margin-bottom: 120px;
 				}
 			}
 

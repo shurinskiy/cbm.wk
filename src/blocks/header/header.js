@@ -1,8 +1,10 @@
 import scrollLock from 'scroll-lock';
 
 (() => {
-	const $shell = $('.header__menu-blind');
-	const $toggle = $('.header__menu-toggle');
+	const breakpoint = window.matchMedia('(max-width:960px)');
+	const $header = $('.header');
+	const $shell = $header.find('.header__menu-blind');
+	const $toggle = $header.find('.header__menu-toggle');
 
 	$toggle.on('click', function(e) {
 		e.preventDefault();
@@ -50,5 +52,11 @@ import scrollLock from 'scroll-lock';
 			scrollLock.enablePageScroll();
 		}
 	});
+
+
+	$(window).on('scroll', function() {
+		$header[($(this).scrollTop() > 40 ? 'add': 'remove') + 'Class']('header_filled');
+	});
+
 
 })();
