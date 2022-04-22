@@ -25,11 +25,12 @@ import scrollLock from 'scroll-lock';
 		let $here = $(this).parent().find('.menu__submenu');
 		
 		if ($shell.css('position') == 'fixed') {
-			e.stopPropagation();
-			e.preventDefault();
-
 			$('.menu__submenu:visible').not($here).slideUp();
-			$here.slideToggle();
+			
+			if ($here.is(':hidden')) {
+				e.preventDefault();
+				$here.slideDown();
+			}
 		}
 	});
 

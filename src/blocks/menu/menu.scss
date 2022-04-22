@@ -1,6 +1,6 @@
 .menu {
 	$self: &;
-	padding: 100px 0 0 65px;
+	padding: 100px 0 50px 0;
 	max-width: 460px;
 	margin-right: 30px;
 
@@ -8,7 +8,6 @@
 		display: block;
 		font-family: "MB", sans-serif;
 		font-size: 23px;
-		padding: 12px 0;
 		
 		&_haschild {
 			
@@ -16,15 +15,13 @@
 				box-sizing: border-box;
 				font-family: "MR", sans-serif;
 				font-size: 15px;
-				
-				&::after {
-					display: block;
-					content: '';
-					// width: 100%;
-					margin-left: -65px;
-					height: 1px;
-					background-color: rgba(255, 255, 255, 0.5);
-				}
+				border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+			}
+		}
+	
+		&_haschild ~ &_haschild {
+			#{$self}__submenu {
+				display: none;
 			}
 		}
 	}
@@ -34,14 +31,14 @@
 		color: #fff;
 		text-transform: uppercase;
 		text-decoration: none;
+		padding: 12px 0 12px 65px;
 	}
-
+	
 	&__submenu {
-		display: none;
-		padding-top: 12px;
-			
+		padding-bottom: 12px;
+		
 		#{$self}__link {
-			padding-bottom: 22px;
+			padding: 22px 0 22px 65px;
 		}
 	}
 }
