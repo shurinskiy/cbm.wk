@@ -184,10 +184,13 @@
 
 			#{$self}__title {
 				max-width: 400px;
+				
+				@include media('<=md') {
+					max-width: none;
+				}
 			}
 
 			#{$self}__main {
-				max-width: 460px;
 				margin-right: 50px;
 			}
 
@@ -238,7 +241,6 @@
 		&_four {
 			
 			#{$self}__main {
-				max-width: 680px;
 				margin-left: 9%;
 				margin-right: 50px;
 				
@@ -253,12 +255,18 @@
 			}
 
 			#{$self}__title {
+				max-width: 680px;
 				margin-bottom: 50px;
 				
 				@include media('<=xlg') {
 					margin-bottom: 10px;
 				}
+				
+				@include media('<=md') {
+					max-width: none;
+				}
 			}
+			
 
 			#{$self}__items {
 				display: flex;
