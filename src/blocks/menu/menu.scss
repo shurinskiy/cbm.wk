@@ -9,6 +9,10 @@
 		font-family: "MB", sans-serif;
 		font-size: 23px;
 		
+		@include media('<=xxs') {
+			font-size: 19px;
+		}
+		
 		&_haschild {
 			
 			#{$self}__item {
@@ -16,6 +20,10 @@
 				font-family: "MR", sans-serif;
 				font-size: 15px;
 				border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+		
+				@include media('<=xxs') {
+					font-size: 14px;
+				}
 			}
 		}
 	
@@ -39,6 +47,10 @@
 		
 		#{$self}__link {
 			padding: 22px 0 22px 65px;
+			
+			@include media('<=xxs') {
+				padding: 14px 0 14px 65px;
+			}
 		}
 	}
 }

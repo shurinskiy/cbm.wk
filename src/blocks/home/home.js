@@ -11,4 +11,8 @@ import Swiper, { Mousewheel } from 'swiper';
 		mousewheel: true
 	});
 
+	$('.home__side[data-scrollable]').on('mousewheel', function(e) {
+		e.stopPropagation();
+	});
+
 })();
