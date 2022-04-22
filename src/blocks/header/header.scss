@@ -18,12 +18,20 @@
 		padding: 15px;
 		flex-shrink: 0;
 
+		@include media('<=lg') {
+			margin: 0;
+		}
+
+		@include media('<=xxs') {
+			width: 100px;
+		}
+		
 		img {
 			display: block;
 			margin: 0 auto;
 		}
 	}
-
+	
 	&__navi {
 		display: flex;
 		align-items: center;
@@ -32,6 +40,11 @@
 		width: 100%;
 		max-width: 650px;
 		justify-content: space-between;
+		margin-right: 50px;
+
+		@include media('<=md') {
+			display: none;
+		}
 	}
 
 	&__navi-link {
@@ -45,7 +58,7 @@
 	&__menu-toggle {
 		@extend %reset-button;
 		flex-shrink: 0;
-		margin-left: auto;
+		margin: 0 20px 0 auto;
 		font-family: "MSB", sans-serif;
 		font-size: 15px;
 		color: #fff;
@@ -61,6 +74,24 @@
 		z-index: 4;
 		background: url('#{$images-path}icons-sprite.svg#icon-burger-view-white') center left 20px / 30px 17px no-repeat rgba(0, 0, 0, 0.5);
 
+		@include media('<=xs') {
+			padding: 13px 20px 13px 0;
+			width: 210px;
+			font-size: 14px;
+			background-size: 22px 13px;
+		}
+		
+		@include media('<=xxxs') {
+			padding: 22px;
+			background-size: 30px 17px;
+			background-position: center !important;
+			width: 70px !important;
+
+			span {
+				display: none !important;
+			}
+		}
+
 		span:nth-child(1) {
 			display: none;
 		}
@@ -75,6 +106,11 @@
 			
 			span:nth-child(2) {
 				display: none;
+			}
+
+			@include media('<=xs') {
+				width: 120px;
+				background-position:  center left 20px;
 			}
 		}
 	}
