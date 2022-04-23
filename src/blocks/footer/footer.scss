@@ -1,0 +1,73 @@
+.footer {
+	$self: &;
+	padding: 80px 0 20px;
+	background: url('#{$images-path}footer-bg.png') center left / cover no-repeat #6D8F96;
+	color: #fff;
+
+	@include media('<=xxxlg') {
+		background-size: auto;
+	}
+	
+	@include media('<=sm') {
+		background-size: cover;
+	}
+
+	&__inner {
+		display: flex;
+		margin-bottom: 100px;
+
+		@include media('<=sm') {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__navi {
+		margin-right: 130px;
+
+		@include media('<=md') {
+			margin: 0 60px 0 0;
+		}
+
+		@include media('<=sm') {
+			margin: 0 120px 50px 0;
+		}
+	}
+
+	&__navi-link {
+		padding-top: 10px;
+		display: block;
+		color: #fff;
+		text-decoration: none;
+		font-family: "MSB", sans-serif;
+		font-size: 15px;
+		text-transform: uppercase;
+		margin-bottom: 35px;
+		white-space: nowrap;
+	}
+	
+	&__social {
+		margin-right: 60px;
+
+		@include media('<=sm') {
+			margin: 0 0 50px 0;
+		}
+	}
+	
+	&__form {
+		margin-left: auto;
+		max-width: 500px;
+		width: 100%;
+		
+		@include media('<=sm') {
+			margin-left: 0;
+		}
+	}
+	
+	&__copy {
+		font-family: "MR", sans-serif;
+		
+		strong {
+			font-family: "MB", sans-serif;
+		}
+	}
+}

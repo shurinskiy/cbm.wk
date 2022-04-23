@@ -1,0 +1,41 @@
+.form {
+	$self: &;
+
+	&_footer {
+
+	}
+
+	&__title {
+		font-family: "MB", sans-serif;
+		font-size: 20px;
+		margin-bottom: 25px;
+	}
+
+	&__field {
+		box-sizing: border-box;
+		border: 1px solid #fff;
+		width: 100%;
+		margin-bottom: 20px;
+		min-height: 48px;
+		display: flex;
+		padding: 10px 15px;
+		border-radius: 100px;
+
+		input, textarea {
+			@extend %reset-input;
+			width: 100%;
+			color: #fff;
+			font-size: 15px;
+			
+			&::placeholder {
+				font-family: "MSB", sans-serif;
+				color: #fff;
+			}
+		}
+	}
+	
+	&__submit {
+		@extend %reset-button;
+		margin-top: 15px;
+	}
+}

@@ -1,0 +1,20 @@
+.button {
+	$self: &;
+	min-height: 48px;
+	background-color: #000;
+	color: #fff;
+	text-decoration: none;
+	font-family: "MSB", sans-serif;
+	font-size: 15px;
+	text-transform: uppercase;
+	padding: 10px 35px;
+	border-radius: 100px;
+	letter-spacing: 0.05em;
+	
+	
+	&_white {
+		background-color: #fff;
+		font-family: "MB", sans-serif;
+		color: #000;
+	}
+}

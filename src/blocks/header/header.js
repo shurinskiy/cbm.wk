@@ -1,7 +1,6 @@
 import scrollLock from 'scroll-lock';
 
 (() => {
-	const breakpoint = window.matchMedia('(max-width:960px)');
 	const $header = $('.header');
 	const $shell = $header.find('.header__menu-blind');
 	const $toggle = $header.find('.header__menu-toggle');

@@ -5,8 +5,24 @@
 	z-index: 2;
 	width: 100%;
 	transition: background-color 0.3s;
+	background-color: #6D8F96;
+	background-image: url('#{$images-path}header-bg.png');
+	box-shadow: 0 4px 60px rgba(0, 0, 0, 0.2);
+	background-position: center left;
+	background-repeat: no-repeat;
+	background-size: cover;
 
-	&_filled {
+	@include media('<=xxxlg') {
+		background-size: auto;
+	}
+	
+	&_home {
+		box-shadow: none;
+		background-image: none;
+		background-color: transparent;
+	}
+	
+	&_filled#{&}_home {
 		background-color: rgba(0, 0, 0, 0.65);
 		box-shadow: 0 4px 60px rgba(0, 0, 0, 0.2);
 	}
