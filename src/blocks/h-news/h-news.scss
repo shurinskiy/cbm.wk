@@ -1,0 +1,71 @@
+.h-news {
+	$self: &;
+	overflow-y: scroll;
+	direction: rtl;
+	text-align: left;
+	padding-left: 40px;
+	// margin-left: 100px;
+	
+	&::-webkit-scrollbar {
+		width: 14px;
+	}
+	
+	&::-webkit-scrollbar-track {
+		background: url('#{$images-path}scrollbar-v-bg.png') center / auto repeat-y transparent;
+	}
+	
+	&::-webkit-scrollbar-thumb {
+		background-color: #fff;
+		border-radius: 10px;
+	}
+	
+	&::-webkit-scrollbar-corner {
+		background-color: transparent;
+	}
+
+	@include media('<=md') {
+		overflow: hidden;
+		overflow-x: scroll;
+		direction: ltr;
+		display: flex;
+		padding: 0;
+	
+		&::-webkit-scrollbar-track {
+			background: url('#{$images-path}scrollbar-h-bg.png') center / auto repeat-x transparent;
+		}
+	}
+
+	&__item {
+		font-size: 20px;
+		margin-bottom: 40px;
+		
+		@include media('<=md') {
+			width: 320px;
+			flex-shrink: 0;
+			margin-right: 20px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 19px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 18px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 17px;
+		}
+
+		p {
+			display: block;
+			margin-bottom: 15px;
+			line-height: 1.5;
+		}
+
+		span {
+			display: block;
+			font-family: "RWBL", sans-serif;
+		}
+	}
+}

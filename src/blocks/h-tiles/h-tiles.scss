@@ -1,0 +1,68 @@
+.h-tiles {
+	$self: &;
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -30px 30px;
+	min-width: 550px;
+	
+	@include media('<=md') {
+		margin: 0 -20px 30px;
+	}
+
+	@include media('<=sm') {
+		min-width: auto;
+	}
+
+	&__item {
+		margin: 0 30px 30px;
+		width: calc(99.9% / 24 * 12 - 60px);
+		font-size: 18px;
+		line-height: 1.4;
+		max-width: 300px;
+		padding-top: 100px;
+		background-position: left top 20px;
+		background-repeat: no-repeat;
+		background-color: transparent;
+		
+		@include media('<=xlg') {
+			margin: 0 30px 20px;
+		}
+		
+		@include media('<=md') {
+			margin: 0 20px 30px;
+			width: calc(99.9% / 24 * 12 - 40px);
+		}
+		
+		@include media('<=xs') {
+			font-size: 17px;
+		}
+		
+		@include media('<=xxs') {
+			max-width: none;
+			padding-top: 80px;
+			background-position: left top;
+			width: calc(99.9% / 24 * 24 - 40px);
+		}
+
+		&:nth-child(1) {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-help-view-white');
+			background-size: 52px 53px;
+		}
+		
+		&:nth-child(2) {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-cloud-view-white');
+			background-size: 54px 51px;
+		}
+		
+		&:nth-child(3) {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-idea-view-white');
+			background-size: 58px 58px;
+		}
+		
+		&:nth-child(4) {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-hands-view-white');
+			background-size: 59px 56px;
+		}
+	}
+}
