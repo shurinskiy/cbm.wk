@@ -23,6 +23,7 @@ import scrollLock from 'scroll-lock';
 		scrollLock.enablePageScroll();
 	});
 
+	
 	$('.menu__item_haschild > a').on('click', function(e) {
 		let $here = $(this).parent().find('.menu__submenu');
 		
@@ -57,6 +58,5 @@ import scrollLock from 'scroll-lock';
 	$(window).on('scroll', function() {
 		$header[($(this).scrollTop() > 40 ? 'add': 'remove') + 'Class']('header_filled');
 	});
-
 
 })();
