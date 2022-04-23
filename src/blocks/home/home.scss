@@ -190,32 +190,9 @@
 
 			#{$self}__side {
 				margin: 12% 0 0 70px;
-				border-left: 1px solid #fff;
 				
 				@include media('<=md') {
 					margin: 0;
-				}
-			}
-
-			#{$self}__side-link {
-				display: block;
-				text-decoration: none;
-				color: #fff;
-				font-family: "RB", sans-serif;
-				font-size: 20px;
-				letter-spacing: 0.03em;
-				padding: 0 20px 20px;
-
-				&:last-child {
-					padding-bottom: 5px;
-				}
-		
-				@include media('<=xxs') {
-					font-size: 18px;
-				}
-		
-				@include media('<=xxxs') {
-					font-size: 17px;
 				}
 			}
 		}
@@ -287,92 +264,10 @@
 
 			#{$self}__side {
 				margin-left: auto;
-				max-width: 700px;
 				align-self: flex-end;
-				
-				@include media('<=xlg') {
-					max-width: 350px;
-				}
-				
+	
 				@include media('<=lg') {
 					align-self: center;
-				}
-	
-				@include media('<=md') {
-					max-width: none;
-				}
-			}
-
-			#{$self}__side-boxes {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: space-between;
-				margin: 0 -30px -20px 0;
-	
-				@include media('<=md') {
-					margin: 0;
-				}
-			}
-
-			#{$self}__side-box {
-				box-sizing: border-box;
-				width: 50%;
-				padding: 35px 35px 50px;
-				background-color: rgba(0, 0, 0, 0.4);
-				
-				@include media('<=xlg') {
-					width: 100%;
-				}
-				
-				@include media('<=md') {
-					width: 50%;
-				}
-				
-				@include media('<=xxs') {
-					width: 100%;
-				}
-					
-				@include media('<=xxxs') {
-					padding: 30px;
-				}
-
-				&:nth-child(1) {
-					border-right: 1px solid rgba(255, 255, 255, 0.1);
-					
-					@include media('<=xlg') {
-						border: none;
-						border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-					}
-					
-					@include media('<=md') {
-						border: none;
-						border-right: 1px solid rgba(255, 255, 255, 0.1);
-					}
-				
-					@include media('<=xxs') {
-						border: none;
-						border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-					}
-				}
-
-				h3 {
-					font-family: "RWBL", sans-serif;
-					font-size: 23px;
-					margin-bottom: 16px;
-				}
-
-				p {
-					font-size: 15px;
-					line-height: 1.5;
-					margin-bottom: 15px;
-				}
-
-				a {
-					display: block;
-					color: #fff;
-					font-size: 15px;
-					text-decoration: none;
-					font-family: "RBB", sans-serif;
 				}
 			}
 		}

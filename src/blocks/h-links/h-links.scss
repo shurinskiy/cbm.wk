@@ -1,0 +1,26 @@
+.h-links {
+	$self: &;
+	border-left: 1px solid #fff;
+
+	&__link {
+		display: block;
+		text-decoration: none;
+		color: #fff;
+		font-family: "RB", sans-serif;
+		font-size: 20px;
+		letter-spacing: 0.03em;
+		padding: 0 20px 20px;
+
+		&:last-child {
+			padding-bottom: 5px;
+		}
+
+		@include media('<=xxs') {
+			font-size: 18px;
+		}
+
+		@include media('<=xxxs') {
+			font-size: 17px;
+		}
+	}
+}
