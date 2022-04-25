@@ -1,10 +1,7 @@
 .p-subscribe {
 	$self: &;
 	margin-bottom: 130px;
-
-	&__inner {
-		display: flex;
-	}
+	display: flex;
 
 	&__form {
 		max-width: 870px;

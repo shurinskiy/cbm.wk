@@ -1,6 +1,7 @@
 .p-advantages {
 	$self: &;
 	margin-bottom: 120px;
+	max-width: 1300px;
 
 	&__title {
 		max-width: 720px;
@@ -9,10 +10,42 @@
 
 	&__items {
 		display: flex;
+		justify-content: space-between;
+
+		@include media('<=lg') {
+			justify-content: flex-start;
+			flex-wrap: wrap;
+		}
 	}
 
 	&__item {
+		max-width: 260px;
+		margin: 0 30px 30px 0;
 		font-size: 18px;
 		line-height: 1.4;
+		padding-top: 115px;
+		background-position: left top;
+		background-repeat: no-repeat;
+		background-color: transparent;
+
+		&:nth-child(1) {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-onion-view-black');
+			background-size: 68px 68px;
+		}
+
+		&:nth-child(2) {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-reactor-view-black');
+			background-size: 73px 68px;
+		}
+		
+		&:nth-child(3) {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-flask-view-black');
+			background-size: 69px 69px;
+		}
+		
+		&:nth-child(4) {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-formula-view-black');
+			background-size: 49px 69px;
+		}
 	}
 }
