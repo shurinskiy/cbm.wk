@@ -1,0 +1,19 @@
+.title {
+	$self: &;
+	font-family: "RWBL", sans-serif;
+	font-size: 100px;
+	color: #112D32;
+	line-height: 1.0;
+	
+	&_subtitle {
+		font-size: 55px;
+	}
+	
+	span {
+		display: block;
+		font-family: "RBL", sans-serif;
+		font-size: 50px;
+		padding-top: 20px;
+		line-height: 1.2;
+	}
+}

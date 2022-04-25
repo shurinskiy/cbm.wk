@@ -1,0 +1,41 @@
+.p-teasers {
+	$self: &;
+
+	&__title {
+		max-width: 870px;
+		margin-bottom: 80px;
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__item {
+		margin-bottom: 100px;
+		max-width: 450px;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: flex-start;
+	}
+
+	&__item-title {
+		max-width: 300px;
+		font-family: "RWBL", sans-serif;
+		font-size: 30px;
+		line-height: 1.0;
+		color: #112D32;
+		margin-bottom: 15px;
+	}
+
+	&__item-text {
+		font-size: 20px;
+		line-height: 1.5;
+		margin-bottom: 20px;
+	}
+
+	&__item-more {
+		margin-top: auto;
+	}
+}

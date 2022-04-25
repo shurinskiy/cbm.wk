@@ -1,0 +1,16 @@
+.main {
+	$self: &;
+	padding-top: 250px;
+
+	&__breadcrumbs {
+
+	}
+
+	&__title {
+		margin-bottom: 110px;
+	
+		.title {
+			max-width: 790px;
+		}
+	}
+}

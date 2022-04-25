@@ -1,0 +1,18 @@
+.p-advantages {
+	$self: &;
+	margin-bottom: 120px;
+
+	&__title {
+		max-width: 720px;
+		margin-bottom: 65px;
+	}
+
+	&__items {
+		display: flex;
+	}
+
+	&__item {
+		font-size: 18px;
+		line-height: 1.4;
+	}
+}
