@@ -4,11 +4,11 @@
 	overflow: hidden;
 
 	@include media('<=xxlg') {
-		padding-top: 200px;
+		padding-top: 220px;
 	}
 
 	@include media('<=lg') {
-		padding-top: 150px;
+		padding-top: 180px;
 	}
 
 	&__breadcrumbs {
@@ -19,7 +19,7 @@
 		margin-bottom: 110px;
 		
 		@include media('<=sm') {
-			margin-bottom: 60px;
+			margin-bottom: 80px;
 		}
 
 	

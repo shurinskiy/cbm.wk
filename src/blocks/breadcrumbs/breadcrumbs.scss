@@ -1,6 +1,10 @@
 .breadcrumbs {
 	$self: &;
 
+	@include media('<=xxs') {
+		margin: 0 0 10px;
+	}
+
 	&__item {
 		color: #112D32;
 		display: inline-block;
@@ -8,7 +12,11 @@
 		font-size: 15px;
 		font-family: "MR", sans-serif;
 		margin-bottom: 20px;
-		
+
+		@include media('<=xxs') {
+			margin: 0 0 10px;
+		}
+	
 		&:not(:last-child)::after {
 			content: '/';
 			margin-left: 5px;

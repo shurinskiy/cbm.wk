@@ -4,6 +4,10 @@
 	&__inner {
 		margin-bottom: 120px;
 		max-width: 1300px;
+
+		@include media('<=sm') {
+			margin: 0 0 50px;
+		}
 	}
 
 	&__title {

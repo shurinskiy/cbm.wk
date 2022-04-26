@@ -1,6 +1,10 @@
 .p-teasers {
 	$self: &;
 
+	@include media('<=xs') {
+		margin: 0 0 100px;
+	}
+
 	&__inner {
 		position: relative;
 
@@ -45,6 +49,10 @@
 			margin: 0 0 100px;
 			width: 100%;
 		}
+
+		@include media('<=xs') {
+			margin: 0 0 50px;
+		}
 		
 		&:nth-child(2n) {
 			#{$self}__item-wrapper {
@@ -82,15 +90,36 @@
 			font-size: 25px;
 			max-width: none;
 		}
+		
+		@include media('<=xs') {
+			font-size: 20px;
+			max-width: none;
+		}
 	}
 
 	&__item-text {
 		font-size: 20px;
 		line-height: 1.5;
 		margin-bottom: 20px;
+		
+		@include media('<=sm') {
+			font-size: 18px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 16px;
+		}
 	}
 
 	&__item-more {
 		margin-top: auto;
+		
+		&.button {
+			@include media('<=xs') {
+				min-height: 40px;
+				padding: 13px 18px;
+				font-size: 13px;
+			}
+		}
 	}
 }

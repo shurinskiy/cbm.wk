@@ -2,6 +2,10 @@
 	$self: &;
 	margin-bottom: 100px;
 	
+	@include media('<=sm') {
+		margin: 0px;
+	}
+
 	&__inner {
 		position: relative;
 
@@ -23,6 +27,14 @@
 		justify-content: space-between;
 		align-items: flex-end;
 		position: relative;
+		
+		@include media('<=md') {
+			align-items: center;
+		}
+		
+		@include media('<=sm') {
+			margin-bottom: 50px !important;
+		}
 
 		&::after {
 			display: block;
@@ -37,6 +49,10 @@
 			background-position: left top;
 			background-repeat: no-repeat;
 			background-color: transparent;
+			
+			@include media('<=sm') {
+				display: none;
+			}
 		}
 		
 		&:nth-child(1) {
@@ -46,6 +62,18 @@
 				margin: -200px 0 70px 0;
 			}
 			
+			@include media('<=lg') {
+				margin: -180px 0 70px 0;
+			}
+			
+			@include media('<=md') {
+				margin: -120px 0 70px 0;
+			}
+			
+			@include media('<=sm') {
+				margin: 0;
+			}
+				
 			&::after {
 				background-image: url('#{$images-path}section-bg-1.png');
 				right: 80px;
@@ -82,15 +110,28 @@
 	&__side {
 		max-width: 630px;
 		margin-top: 120px;
+		
+		@include media('<=sm') {
+			margin: 0;
+			max-width: none;
+		}
 	}
 
 	&__title {
 		margin-bottom: 30px;
+		
+		@include media('<=sm') {
+			max-width: 500px;
+		}
 	}
 
 	&__text {
 		font-size: 18px;
 		line-height: 1.4;
+		
+		@include media('<=xs') {
+			font-size: 16px;
+		}
 	}
 
 	&__image {
@@ -107,6 +148,14 @@
 		
 		@include media('<=xlg') {
 			max-width: 550px;
+		}
+		
+		@include media('<=lg') {
+			max-width: 400px;
+		}
+		
+		@include media('<=sm') {
+			display: none;
 		}
 
 		img {

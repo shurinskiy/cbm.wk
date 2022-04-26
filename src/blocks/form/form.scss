@@ -40,6 +40,15 @@
 		display: flex;
 		padding: 10px 35px;
 		border-radius: 100px;
+		
+		@include media('<=md') {
+			min-height: 40px;
+			padding: 12px 20px;
+		}
+		
+		@include media('<=sm') {
+			margin-bottom: 25px;
+		}
 
 		input, textarea {
 			@extend %reset-input;
@@ -47,6 +56,10 @@
 			color: #000;
 			font-size: 20px;
 			
+			@include media('<=sm') {
+				font-size: 17px;
+			}
+				
 			&::placeholder {
 				font-family: "MSB", sans-serif;
 				color: #575757;
