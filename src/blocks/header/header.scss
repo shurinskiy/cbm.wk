@@ -143,6 +143,7 @@
 		flex-flow: column nowrap;
 		position: fixed;
 		height: 100vh;
+		height: calc(var(--vh, 1vh) * 100);
 		z-index: 3;
 		right: -650px; top: 0;
 		max-width: 650px;
