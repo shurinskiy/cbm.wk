@@ -113,13 +113,12 @@
 
 	&__item-more {
 		margin-top: auto;
-		
-		&.button {
-			@include media('<=xs') {
-				min-height: 40px;
-				padding: 13px 18px;
-				font-size: 13px;
-			}
+
+		@include media('<=xs') {
+			display: block;
+			max-width: 160px;
+			text-align: center;
+			margin-left: auto;
 		}
 	}
 }

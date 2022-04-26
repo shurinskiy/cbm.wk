@@ -10,6 +10,10 @@
 			margin-bottom: 20px;
 			padding: 10px 15px;
 
+			@include media('<=xs') {
+				min-height: 40px;
+			}
+
 			input, textarea {
 				color: #fff;
 				font-size: 15px;
@@ -22,6 +26,10 @@
 
 		#{$self}__submit {
 			margin-top: 15px;
+		
+			@include media('<=md') {
+				margin-top: 0px;
+			}
 		}
 	}
 
@@ -41,13 +49,18 @@
 		padding: 10px 35px;
 		border-radius: 100px;
 		
-		@include media('<=md') {
-			min-height: 40px;
+		@include media('<=lg') {
+			min-height: 48px;
 			padding: 12px 20px;
 		}
 		
 		@include media('<=sm') {
 			margin-bottom: 25px;
+		}
+		
+		@include media('<=xs') {
+			min-height: 40px;
+			padding: 9px 20px;
 		}
 
 		input, textarea {
@@ -70,5 +83,9 @@
 	&__submit {
 		@extend %reset-button;
 		margin-top: 25px;
+		
+		@include media('<=md') {
+			margin-top: 0px;
+		}
 	}
 }
