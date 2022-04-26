@@ -1,6 +1,15 @@
 .main {
 	$self: &;
 	padding-top: 250px;
+	overflow: hidden;
+
+	@include media('<=xxlg') {
+		padding-top: 200px;
+	}
+
+	@include media('<=lg') {
+		padding-top: 150px;
+	}
 
 	&__breadcrumbs {
 
@@ -8,6 +17,11 @@
 
 	&__title {
 		margin-bottom: 110px;
+		
+		@include media('<=sm') {
+			margin-bottom: 60px;
+		}
+
 	
 		.title {
 			max-width: 790px;

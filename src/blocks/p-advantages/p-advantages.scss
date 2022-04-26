@@ -1,7 +1,10 @@
 .p-advantages {
 	$self: &;
-	margin-bottom: 120px;
-	max-width: 1300px;
+	
+	&__inner {
+		margin-bottom: 120px;
+		max-width: 1300px;
+	}
 
 	&__title {
 		max-width: 720px;

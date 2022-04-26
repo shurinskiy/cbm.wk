@@ -1,6 +1,22 @@
 .p-teasers {
 	$self: &;
 
+	&__inner {
+		position: relative;
+
+		&::after {
+			display: block;
+			content: '';
+			position: absolute;
+			right: -29%;
+			top: calc(100% - 150px);
+			z-index: -1;
+			width: 760px;
+			height: 470px;
+			background: url('#{$images-path}section-bg-2.png') left top / auto no-repeat transparent;
+		}
+	}
+
 	&__title {
 		max-width: 870px;
 		margin-bottom: 80px;
@@ -10,7 +26,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		margin: -20px 0;
+		margin: 0 -20px;
 
 		@include media('<=sm') {
 			display: block;
@@ -63,6 +79,7 @@
 		margin-bottom: 15px;
 		
 		@include media('<=sm') {
+			font-size: 25px;
 			max-width: none;
 		}
 	}

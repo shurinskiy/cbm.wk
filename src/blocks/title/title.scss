@@ -4,9 +4,41 @@
 	font-size: 100px;
 	color: #112D32;
 	line-height: 1.0;
-	
+
+	@include media('<=xxlg') {
+		font-size: 90px;
+	}
+
+	@include media('<=xlg') {
+		font-size: 80px;
+	}
+
+	@include media('<=sm') {
+		font-size: 60px;
+	}
+
+	@include media('<=xxs') {
+		font-size: 50px;
+	}
+
 	&_subtitle {
 		font-size: 55px;
+		
+		@include media('<=xxlg') {
+			font-size: 50px;
+		}
+		
+		@include media('<=xlg') {
+			font-size: 45px;
+		}
+
+		@include media('<=sm') {
+			font-size: 35px;
+		}
+
+		@include media('<=xxs') {
+			font-size: 30px;
+		}
 	}
 	
 	span {
@@ -15,5 +47,21 @@
 		font-size: 50px;
 		padding-top: 20px;
 		line-height: 1.2;
+		
+		@include media('<=xxlg') {
+			font-size: 45px;
+		}
+		
+		@include media('<=xlg') {
+			font-size: 40px;
+		}
+
+		@include media('<=sm') {
+			font-size: 30px;
+		}
+
+		@include media('<=xxs') {
+			font-size: 25px;
+		}
 	}
 }
