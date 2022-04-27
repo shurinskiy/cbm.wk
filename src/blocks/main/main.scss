@@ -11,6 +11,10 @@
 		padding-top: 180px;
 	}
 
+	@include media('<=xxs') {
+		padding-top: 150px;
+	}
+
 	&__breadcrumbs {
 
 	}
@@ -20,11 +24,6 @@
 		
 		@include media('<=sm') {
 			margin-bottom: 80px;
-		}
-
-	
-		.title {
-			max-width: 790px;
 		}
 	}
 }

@@ -1,0 +1,57 @@
+.t-block {
+	$self: &;
+
+	&__title {
+		margin-bottom: 30px;
+		
+		@include media('<=sm') {
+			max-width: 500px;
+		}
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 1.4;
+		margin-bottom: 30px;
+		
+		@include media('<=xs') {
+			font-size: 16px;
+		}
+
+		&_large {
+			font-family: "RBL", sans-serif;
+			font-size: 50px;
+			line-height: 1.2;
+
+			p {
+				margin-bottom: 30px;
+			}
+		
+			@include media('<=xxlg') {
+				font-size: 45px;
+			}
+			
+			@include media('<=xlg') {
+				font-size: 40px;
+			}
+	
+			@include media('<=md') {
+				font-size: 30px;
+			}
+	
+			@include media('<=xxs') {
+				font-size: 20px;
+			}
+		}
+	}
+
+	&__sign {
+		font-family: "RWBL", sans-serif;
+		font-size: 35px;
+		margin-bottom: 35px;
+	}
+
+	&__button {
+		margin-bottom: 30px;		
+	}
+}

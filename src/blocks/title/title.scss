@@ -5,6 +5,14 @@
 	color: #112D32;
 	line-height: 1.0;
 
+	&_short {
+		max-width: 840px;
+
+		span {
+			max-width: 700px;
+		}
+	}
+
 	@include media('<=xxlg') {
 		font-size: 90px;
 	}
@@ -32,7 +40,7 @@
 			font-size: 45px;
 		}
 
-		@include media('<=sm') {
+		@include media('<=md') {
 			font-size: 35px;
 		}
 

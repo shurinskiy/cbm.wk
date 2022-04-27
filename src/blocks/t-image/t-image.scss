@@ -1,0 +1,7 @@
+.t-image {
+	$self: &;
+
+	img {
+		clip-path: url(#hexagonClipPath);
+	}
+}

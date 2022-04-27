@@ -1,0 +1,119 @@
+.p-team {
+	$self: &;
+	margin-bottom: 45px;
+
+	&__top {
+
+	}
+
+	&__title {
+		margin-bottom: 40px;
+	}
+
+	&__text {
+		font-family: "RBL", sans-serif;
+		font-size: 50px;
+		line-height: 1.2;
+		margin-bottom: 90px;
+
+		p {
+			margin-bottom: 70px;
+		}
+		
+		@include media('<=xxlg') {
+			font-size: 45px;
+		}
+		
+		@include media('<=xlg') {
+			font-size: 40px;
+		}
+
+		@include media('<=md') {
+			font-size: 30px;
+		}
+
+		@include media('<=xxs') {
+			font-size: 20px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0 -30px;
+		
+		@include media('<=lg') {
+			margin: 0 -10px;
+		}
+	
+		&_decored {
+			position: relative;
+	
+			&::after {
+				display: block;
+				content: '';
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				z-index: -1;
+				transform: translate(-50%, -50%);
+				width: 760px;
+				height: 470px;
+				background: url('#{$images-path}section-bg-1.png') left top / auto no-repeat transparent;
+			}
+		}
+	}
+	
+	&__item {
+		margin: 0 30px 65px;
+		width: calc(99.9% / 12 * 3 - 60px);
+		
+		@include media('<=lg') {
+			margin: 0 10px 65px;
+			width: calc(99.9% / 12 * 3 - 20px);
+		}
+		
+		@include media('<=md') {
+			width: calc(99.9% / 12 * 4 - 20px);
+		}
+		
+		@include media('<=xs') {
+			width: calc(99.9% / 12 * 6 - 20px);
+		}
+		
+		@include media('<=xxs') {
+			margin: 0 10px 30px;
+		}
+		
+		@include media('<=xxxs') {
+			width: calc(99.9% / 12 * 12 - 20px);
+		}
+	}
+
+	&__image {
+		margin-bottom: 25px;
+		text-align: center;
+	}
+
+	&__name {
+		font-size: 35px;
+		font-family: "MR", sans-serif;
+		
+		@include media('<=md') {
+			font-size: 28px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 22px;
+		}
+		
+		span {
+			display: block;
+			
+			&:last-child {
+				font-family: "MBL", sans-serif;
+			}
+		}
+	}
+}

@@ -1,0 +1,47 @@
+.p-joining {
+	$self: &;
+	padding-top: 40px;
+	margin-bottom: 140px;
+		
+	@include media('<=lg') {
+		padding-top: 0;
+		margin-bottom: 100px;
+	}
+
+	&__text {
+		font-size: 55px;
+		line-height: 1.0;
+		font-family: "GBL", sans-serif;
+		color: #112D32;
+		margin: 0 auto 70px;
+		max-width: 1200px;
+		text-align: center;
+		
+		@include media('<=lg') {
+			font-size: 48px;
+			margin-bottom: 50px;
+		}
+		
+		@include media('<=md') {
+			font-size: 44px;
+		}
+		
+		@include media('<=sm') {
+			font-size: 35px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 30px;
+		}
+	}
+	
+	&__button {
+		&.button {
+			display: block;
+			width: 100%;
+			max-width: 270px;
+			background-color: #18325B;
+			margin: 0 auto;
+		}
+	}
+}

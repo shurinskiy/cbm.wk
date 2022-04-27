@@ -1,24 +1,31 @@
 .p-teasers {
 	$self: &;
+	margin-bottom: 20px;
 
 	@include media('<=xs') {
 		margin: 0 0 100px;
 	}
 
-	&__inner {
-		position: relative;
-
-		&::after {
-			display: block;
-			content: '';
-			position: absolute;
-			right: -29%;
-			top: calc(100% - 150px);
-			z-index: -1;
-			width: 760px;
-			height: 470px;
-			background: url('#{$images-path}section-bg-2.png') left top / auto no-repeat transparent;
+	&_decored {
+		#{$self}__inner {
+			position: relative;
+		
+			&::after {
+				display: block;
+				content: '';
+				position: absolute;
+				right: -29%;
+				top: calc(100% - 150px);
+				z-index: -1;
+				width: 760px;
+				height: 470px;
+				background: url('#{$images-path}section-bg-2.png') left top / auto no-repeat transparent;
+			}
 		}
+	}
+
+	&__inner {
+
 	}
 
 	&__title {

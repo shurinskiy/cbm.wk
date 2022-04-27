@@ -1,0 +1,7 @@
+.p-image {
+	$self: &;
+
+	img {
+		clip-path: url(#hexClipPath);
+	}
+}
