@@ -1,17 +1,14 @@
 .layout-2 {
 	$self: &;
 	position: relative;
-
-	&::after {
-		display: block;
-		content: '';
-		position: absolute;
-		right: 0;
-		top: 0;
-		z-index: -1;
-		width: 760px;
-		height: 470px;
-		background: url('#{$images-path}section-bg-1.png') left top / auto no-repeat transparent;
+	margin-top: -270px;
+	
+	@include media('<=xxxlg') {
+		margin-top: -100px;
+	}
+	
+	@include media('<=xlg') {
+		margin-top: 0px;
 	}
 
 	&::before {
@@ -45,6 +42,36 @@
 		justify-content: space-between;
 		align-items: center;
 		position: relative;
+
+		&:nth-child(1) {
+			position: relative;
+			align-items: flex-end;
+			margin-bottom: 40px;
+			
+			@include media('<=xxxlg') {
+				align-items: center;
+			}
+		
+			&::before {
+				display: block;
+				content: '';
+				position: absolute;
+				right: 50px;
+				top: calc(100% - 300px);
+				z-index: -1;
+				width: 760px;
+				height: 470px;
+				background: url('#{$images-path}section-bg-1.png') left top / auto no-repeat transparent;
+			}
+			
+			#{$self}__side {
+				max-width: 620px;
+				
+				@include media('<=xxxlg') {
+					margin: 0;
+				}
+			}
+		}
 
 		&:nth-child(2) {
 			position: relative;
