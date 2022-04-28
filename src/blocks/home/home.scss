@@ -61,8 +61,8 @@
 				margin-left: 9%;
 				max-width: 465px;
 
-				@include media('<=xlg') {
-					margin: 0;				
+				@include media('<=lg') {
+					margin-left: 4%;
 				}
 
 				@include media('<=md') {
@@ -94,8 +94,8 @@
 			#{$self}__main {
 				margin-left: 9%;
 
-				@include media('<=xlg') {
-					margin: 0;
+				@include media('<=lg') {
+					margin-left: 4%;
 				}
 				
 				@include media('<=md') {
@@ -138,6 +138,14 @@
 
 			#{$self}__main {
 				margin-right: 50px;
+				
+				@include media('<=xlg') {
+					margin-left: 7%;
+				}
+				
+				@include media('<=lg') {
+					margin-left: 4%;
+				}
 			}
 
 			#{$self}__side {
@@ -159,9 +167,9 @@
 			#{$self}__main {
 				margin-left: 9%;
 				margin-right: 50px;
-				
-				@include media('<=xlg') {
-					margin-left: 0;
+
+				@include media('<=lg') {
+					margin-left: 4%;
 				}
 				
 				@include media('<=md') {
@@ -180,8 +188,13 @@
 				@include media('<=xlg') {
 					margin-bottom: 10px;
 				}
+
+				@include media('<=lg') {
+					margin-right: -150px;
+				}
 				
 				@include media('<=sm') {
+					margin-right: 0;
 					max-width: none;
 				}
 			}
@@ -245,6 +258,11 @@
 		border-radius: 100px;
 		font-size: 14px;
 		font-family: "MB", sans-serif;
+		transition: box-shadow 0.3s;
+
+		&:hover {
+			box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.75);
+		}
 		
 		@include media('<=xxs') {
 			padding: 11px;
@@ -266,8 +284,16 @@
 		z-index: 1;
 		top: 50%;
 		transform: translateY(-50%);
-		left: 3%;
+		left: 50px;
 		width: 30px;
+		
+		@include media('<=lg') {
+			left: 20px;
+		}
+		
+		@include media('<=sm') {
+			display: none;
+		}
 	}
 
 	&__dot {
@@ -277,8 +303,12 @@
 		border-radius: 50%;
 		background-color: rgba(255, 255, 255, 0.5);
 		margin: 40px auto;
-		transition: background-color 0.3s, height 0.3s, width 0.3s;
+		transition: background-color 0.4s, height 0.4s, width 0.4s, box-shadow 0.2s;
 		cursor: pointer;
+
+		&:hover {
+			box-shadow: 0px 0px 15px rgba(255, 255, 255);
+		}
 
 		&.active {
 			width: 15px;

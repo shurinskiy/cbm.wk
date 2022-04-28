@@ -65,6 +65,8 @@
 
 	&__side {
 		max-width: 50%;
+		position: relative;
+		z-index: 1;
 
 		@include media('<=sm') {
 			max-width: none;

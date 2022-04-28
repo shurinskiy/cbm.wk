@@ -56,7 +56,8 @@ import scrollLock from 'scroll-lock';
 
 
 	$(window).on('scroll', function() {
-		$header[($(this).scrollTop() > 40 ? 'add': 'remove') + 'Class']('header_filled');
+		if ($header.hasClass('header_home'))
+			$header[($(this).scrollTop() > 40 ? 'add': 'remove') + 'Class']('header_filled');
 	});
 
 	document.documentElement.style.setProperty('--vh', `${vh}px`);
