@@ -1,0 +1,36 @@
+.p-roles {
+	$self: &;
+	margin-bottom: 130px;
+
+	&__title {
+		margin-bottom: 35px;
+		
+		@include media('<=sm') {
+			margin-bottom: 0px;
+		}
+	}
+
+	&__block {
+		padding: 30px 0;
+		border-bottom: 1px solid #000;
+		font-size: 18px;
+		line-height: 1.4;
+	}
+
+	&__link {
+		display: block;
+		color: #000;
+		font-family: "RBB", sans-serif;
+
+		@include media('<=xs') {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__button {
+		margin-top: 50px;
+		width: 100%;
+		max-width: 310px;
+		background-color: #18325B;
+	}
+}
