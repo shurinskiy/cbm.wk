@@ -54,5 +54,11 @@
 			background-image: url('#{$images-path}icons-sprite.svg#icon-formula-view-black');
 			background-size: 49px 69px;
 		}
+
+		@include media('<=xs') {
+			background-position: left center;
+			padding: 0 0 0 100px;
+			margin-bottom: 80px;
+		}
 	}
 }
