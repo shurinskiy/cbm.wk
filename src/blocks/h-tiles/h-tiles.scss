@@ -5,7 +5,11 @@
 	flex-wrap: wrap;
 	margin: 0 -30px 30px;
 	min-width: 550px;
-	
+		
+	@include media('height<=870px') {
+		margin-bottom: 20px;
+	}
+
 	@include media('<=md') {
 		margin: 0 -20px 30px;
 	}
@@ -24,6 +28,12 @@
 		background-position: left top 20px;
 		background-repeat: no-repeat;
 		background-color: transparent;
+		
+		@include media('height<=870px') {
+			padding-top: 80px;
+			background-position: left top;
+			font-size: 17px;
+		}
 		
 		@include media('<=xlg') {
 			margin: 0 30px 20px;
