@@ -1,0 +1,102 @@
+.p-layout {
+	$self: &;
+
+	&__section {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 30px;
+		
+		&:nth-child(1) {
+
+			#{$self}__image {
+				position: relative;
+				align-self: flex-start;
+	
+				&::after {
+					display: block;
+					content: '';
+					width: 675px;
+					height: 420px;
+					position: absolute;
+					right: 40%;
+					top: calc(100% - 200px);
+					z-index: -1;
+					background: url('#{$images-path}section-bg-1.png') left top / auto no-repeat transparent;
+				}
+			}
+		}
+		
+		&:nth-child(2) {
+
+			#{$self}__image {
+				position: relative;
+	
+				&::after {
+					display: block;
+					content: '';
+					width: 675px;
+					height: 420px;
+					position: absolute;
+					left: 55%;
+					top: calc(100% - 230px);
+					z-index: -1;
+					background: url('#{$images-path}section-bg-1.png') left top / auto no-repeat transparent;
+				}
+			}
+		}
+
+		&:nth-child(even) {
+			
+			#{$self}__image {
+				order: -1;
+				transform: translateX(-28%);
+				
+				@include media('<=xxxlg') {
+					transform: translateX(-20%);
+				}
+				
+				@include media('<=xxlg') {
+					transform: translateX(-10%);
+				}
+			}
+		}
+	}
+
+	&__side {
+		max-width: 50%;
+
+		@include media('<=sm') {
+			max-width: none;
+		}
+	}
+
+	&__image {
+		transform: translateX(28%);
+				
+		@include media('<=xxxlg') {
+			transform: translateX(20%);
+		}
+				
+		@include media('<=xxlg') {
+			transform: translateX(10%);
+		}
+				
+		@include media('<=xxlg') {
+			max-width: 650px;
+			flex-shrink: 0;
+		}
+		
+		@include media('<=xlg') {
+			max-width: 550px;
+		}
+		
+		@include media('<=lg') {
+			max-width: 400px;
+		}
+		
+		@include media('<=sm') {
+			display: none;
+		}
+	}
+}
