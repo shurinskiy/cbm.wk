@@ -1,4 +1,4 @@
-import Swiper, { Mousewheel } from 'swiper';
+import Swiper, { Mousewheel, Pagination } from 'swiper';
 
 (() => {
 	
@@ -8,12 +8,18 @@ import Swiper, { Mousewheel } from 'swiper';
 	
 		const enableSwiper = () => {
 			swiper = new Swiper(".home__slider", {
-				modules: [Mousewheel],
+				modules: [Mousewheel, Pagination],
 				slidesPerView: 1,
 				loop: true,
 				speed: 800,
 				direction: 'vertical',
-				mousewheel: true
+				mousewheel: true,
+				pagination: {
+					el: '.home__dots',
+					clickable: true,
+					bulletClass: 'home__dot',
+					bulletActiveClass: 'active'
+				}
 			});
 		}
 	

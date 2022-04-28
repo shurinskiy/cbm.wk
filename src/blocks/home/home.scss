@@ -260,4 +260,30 @@
 	&__tiles {
 
 	}
+
+	&__dots {
+		position: absolute;
+		z-index: 1;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 3%;
+		width: 30px;
+	}
+
+	&__dot {
+		display: block;
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background-color: rgba(255, 255, 255, 0.5);
+		margin: 40px auto;
+		transition: background-color 0.3s, height 0.3s, width 0.3s;
+		cursor: pointer;
+
+		&.active {
+			width: 15px;
+			height: 15px;
+			background-color: #fff;
+		}
+	}
 }
