@@ -1,0 +1,89 @@
+.s-card {
+	$self: &;
+	box-sizing: border-box;
+	display: flex;
+	flex-flow: column nowrap;
+	padding: 25px 25px 35px;
+	background-color: #ccc;
+	transition: background-color 0.4s, transform 0.4s;
+
+	
+	&:hover {
+		transform: translateY(-35px);
+		background-color: #3E92A0;
+		color: #fff;
+		
+		#{$self}__text {
+			color: #fff;
+		}
+		
+		#{$self}__more {
+			color: #fff;
+		}
+
+		#{$self}__title {
+			&_doc::after {
+				opacity: 1;
+				background-image: url('#{$images-path}icons-sprite.svg#icon-news-view-white');
+			}
+
+			&_media::after {
+				opacity: 1;
+				background-image: url('#{$images-path}icons-sprite.svg#icon-media-view-white');
+			}
+		}
+	}
+	
+	&__title {
+		font-family: "RWBL", sans-serif;
+		font-size: 25px;
+		margin-bottom: 10px;
+		min-height: 35px;
+		display: flex;
+		justify-content: space-between;
+
+		&::after {
+			flex-shrink: 0;
+			display: block;
+			content: '';
+			width: 35px;
+			height: 35px;
+			background-position: center right;
+			background-repeat: no-repeat;
+			background-color: transparent;
+			opacity: 0.25;
+			margin-left: 15px;
+		}
+
+		&_doc::after {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-news-view-black');
+			background-size: 33px 30px;
+		}
+
+		&_media::after {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-media-view-black');
+			background-size: 31px 25px;
+		}
+	}
+	
+	&__text {
+		font-size: 15px;
+		margin-bottom: 20px;
+		line-height: 1.5;
+		color: #000;
+		text-decoration: none;
+	}
+	
+	&__more {
+		color: #000;
+		text-decoration: none;
+		margin-top: auto;
+		font-size: 15px;
+		font-family: "RBB", sans-serif;
+		align-self: flex-start;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

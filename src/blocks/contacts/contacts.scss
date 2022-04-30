@@ -2,7 +2,7 @@
 	$self: &;
 	position: relative;
 
-	&::after {
+	&::before {
 		display: block;
 		content: '';
 		width: 675px;
@@ -10,6 +10,18 @@
 		position: absolute;
 		right: -24%;
 		top: -150px;
+		z-index: -1;
+		background: url('#{$images-path}section-bg-1.png') left top / auto no-repeat transparent;
+	}
+
+	&::after {
+		display: block;
+		content: '';
+		width: 675px;
+		height: 420px;
+		position: absolute;
+		left: -15%;
+		top: calc(100% - 20px);
 		z-index: -1;
 		background: url('#{$images-path}section-bg-1.png') left top / auto no-repeat transparent;
 	}

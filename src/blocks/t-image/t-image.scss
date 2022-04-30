@@ -1,5 +1,8 @@
 .t-image {
 	$self: &;
+	display: block;
+	overflow: hidden;
+	text-align: center;
 
 	img {
 		clip-path: url(#hexagonClipPath);

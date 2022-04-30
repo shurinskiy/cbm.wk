@@ -1,0 +1,35 @@
+.p-recent {
+	$self: &;
+	margin-bottom: 100px;
+
+	&__title {
+		margin-bottom: 10px;
+	}
+
+	&__items {
+		margin-bottom: 30px;
+	}
+
+	&__item {
+		border-bottom: 1px solid #000;
+		padding: 20px 0 12px;
+	}
+
+	&__text {
+		display: block;
+		color: #000;
+		text-decoration: none;
+		font-size: 20px;
+		margin-bottom: 8px;
+	}
+	
+	&__date {
+		display: block;
+		font-size: 20px;
+		font-family: "RWBL", sans-serif;
+	}
+
+	&__pagination {
+
+	}
+}
