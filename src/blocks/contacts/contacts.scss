@@ -1,5 +1,18 @@
 .contacts {
 	$self: &;
+	position: relative;
+
+	&::after {
+		display: block;
+		content: '';
+		width: 675px;
+		height: 420px;
+		position: absolute;
+		right: -24%;
+		top: -150px;
+		z-index: -1;
+		background: url('#{$images-path}section-bg-1.png') left top / auto no-repeat transparent;
+	}
 
 	&__title {
 		margin-bottom: 35px;
