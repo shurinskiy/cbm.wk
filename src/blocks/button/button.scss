@@ -1,7 +1,6 @@
 .button {
 	$self: &;
-	display: inline-block;
-	box-sizing: border-box;
+	@extend %reset-button;
 	min-height: 48px;
 	background-color: #111;
 	color: #fff;
