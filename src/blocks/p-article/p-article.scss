@@ -1,0 +1,78 @@
+.p-article {
+	$self: &;
+	margin-bottom: 90px;
+
+	&__title {
+		max-width: 900px;
+		margin-bottom: 70px;
+			
+		@include media('<=md') {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__share {
+		margin-bottom: 60px;
+
+		&_top {
+			margin: -120px 0 60px auto;
+			
+			@include media('<=xlg') {
+				margin: -60px 0 60px auto;
+			}
+			
+			@include media('<=md') {
+				margin: 0 0 60px 0;
+			}
+		}
+	}
+
+	&__video {
+		@include aspect-ratio(1.777, 1);
+		min-height: 300px;
+		margin-bottom: 90px;
+			
+		@include media('<=md') {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__text {
+		font-family: "RBL", sans-serif;
+		font-size: 50px;
+		line-height: 1.2;
+
+		p {
+			margin-bottom: 70px;
+			
+			@include media('<=xlg') {
+				margin-bottom: 50px;
+			}
+			
+			@include media('<=md') {
+				margin-bottom: 30px;
+			}
+			
+			@include media('<=xxs') {
+				margin-bottom: 20px;
+			}
+		}
+		
+		@include media('<=xxlg') {
+			font-size: 45px;
+		}
+		
+		@include media('<=xlg') {
+			font-size: 40px;
+		}
+
+		@include media('<=md') {
+			font-size: 30px;
+		}
+
+		@include media('<=xxs') {
+			font-size: 20px;
+		}
+
+	}
+}

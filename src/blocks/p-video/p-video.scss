@@ -1,0 +1,64 @@
+.p-video {
+	$self: &;
+	box-sizing: border-box;
+	background-color: #000;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center right;
+	overflow: hidden;
+	position: relative;
+
+	&__frame {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 2;
+	}
+
+	&__play {
+		@extend %reset-button;
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 3;
+		transform: translate(-50%, -50%);
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		background-color: rgba(60, 60, 60, 0.4);
+		transition: background-color 0.3s ease;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+	
+		&::before {
+			content: '';
+			width: 0; 
+			height: 0;
+			border-top: 18px solid transparent;
+			border-left: 32px solid #fff;
+			border-bottom: 18px solid transparent;
+			margin-left: 8px;
+			filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.5));
+		}
+
+		@include media('<=xxs') {
+			width: 60px;
+			height: 60px;
+
+			&::before {
+				border-top-width: 14px;
+				border-bottom-width: 14px;
+				border-left-width: 24px;
+			}
+		}
+
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.4);
+		}
+	}
+}

@@ -1,0 +1,44 @@
+.p-share {
+	$self: &;
+	box-sizing: border-box;
+	display: flex;
+	padding: 12px 18px;
+	border: 1px solid black;
+	border-radius: 10px;
+	max-width: 275px;
+
+	span {
+		font-family: "RWBL", sans-serif;
+		font-size: 20px;
+		padding-right: 16px;
+		margin-right: auto;
+	}
+
+	&__link {
+		width: 26px;
+		height: 26px;
+		border-radius: 5px;
+		flex-shrink: 0;
+		
+		&:not(:last-child) {
+			margin-right: 16px;
+		}
+
+		&_fb {
+			background: url('#{$images-path}icons-sprite.svg#icon-fb-view-white') right 6px bottom / 11px 21px no-repeat #000;
+		}
+		
+		&_in {
+			background: url('#{$images-path}icons-sprite.svg#icon-soc-linked-view-white') center bottom 6px / 16px 15px no-repeat #000;
+		}
+		
+		&_tw {
+			background: url('#{$images-path}icons-sprite.svg#icon-soc-twitter-view-white') center / 17px 14px no-repeat #000;
+		}
+		
+		&_mail {
+			background: url('#{$images-path}icons-sprite.svg#icon-mail-view-black') center / 26px 19px no-repeat transparent;
+			
+		}
+	}
+}
