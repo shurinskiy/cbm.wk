@@ -1,0 +1,42 @@
+.i-title {
+	$self: &;
+	font-family: "RWB", sans-serif;
+	font-size: 80px;
+	line-height: 1.05;
+	color: #000;
+	text-decoration: none;
+	
+	&_subtitle {
+		line-height: 1.2;
+		font-size: 52px;
+	}
+	
+	&_small {
+		line-height: 1.2;
+		font-size: 36px;
+	}
+
+	&_ocean {
+		color: #18325B;
+	}
+
+	&_azure {
+		color: #2A5393;
+	}
+
+	&_cyan {
+		color: #008698;
+	}
+
+	&_spring {
+		color: #1B743E;
+	}
+
+	&_green {
+		color: #1B743E;
+	}
+
+	&_red {
+		color: #5D9C42;
+	}
+}

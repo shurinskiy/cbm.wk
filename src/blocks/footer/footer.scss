@@ -14,7 +14,7 @@
 
 	&__inner {
 		display: flex;
-		margin-bottom: 100px;
+		margin-bottom: 70px;
 
 		@include media('<=sm') {
 			flex-wrap: wrap;

@@ -1,0 +1,20 @@
+.i-breadcrumbs {
+	$self: &;
+
+	&__item {
+		display: inline-block;
+		font-family: "RB", sans-serif;
+		font-size: 14px;
+		text-decoration: none;
+		color: #000;
+			
+		&:not(:last-child)::after {
+			content: '/';
+			margin: 0 5px 0 10px;
+		}
+
+		&_current {
+
+		}
+	}
+}

@@ -1,11 +1,15 @@
-.container {
+.i-container {
 	$self: &;
 	box-sizing: border-box;
-	max-width: 1540px;
+	max-width: 1440px;
 	margin-left: auto;
 	margin-right: auto;
-	padding: 0 30px;
+	padding: 0 70px;
 	width: 100%;
+	
+	@include media('<=xxlg') {
+		padding: 0 30px;
+	}
 	
 	@include media('<=lg') {
 		padding: 0 20px;

@@ -2,7 +2,7 @@
 @include reset(); 
 
 // Include breakpoints badge
-// body { @include screen-media(); }
+body { @include screen-media(); }
 
 // Import media-query helper
 @import "../../node_modules/include-media/dist/_include-media.scss";
@@ -41,6 +41,7 @@ $breakpoints: (
 
 	@include font-face("GothamPro-Black", "GBL");
 	@include font-face("Raleway-Black", "RWBL");
+	@include font-face("Raleway-Bold", "RWB");
 	@include font-face("Montserrat-Regular", "MR"); // Decimal
 	@include font-face("Montserrat-Bold", "MB"); // Decimal
 	@include font-face("Montserrat-Black", "MBL"); // Decimal
