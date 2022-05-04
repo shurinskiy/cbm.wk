@@ -11,6 +11,20 @@
 		padding: 0 5px;
 	}
 
+	&_lilac {
+		#{$self}__button.active {
+			background-color: #6F5FCE;
+		}
+		
+		#{$self}__subtitle {
+			color: #6F5FCE;
+		}
+
+		#{$self}__list {
+			color: #575757;
+		}
+	}
+
 	&__title {
 		max-width: 580px;
 		text-align: center;
