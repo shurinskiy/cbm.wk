@@ -4,3 +4,4 @@ import "../blocks/d-down/d-down.js";
 import "../blocks/p-slider/p-slider.js";
 import "../blocks/p-video/p-video.js";
 import "../blocks/tab/tab.js";
+import "../blocks/i-hard/i-hard.js";
