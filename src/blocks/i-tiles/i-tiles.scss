@@ -1,18 +1,45 @@
 .i-tiles {
 	$self: &;
 	margin-bottom: 100px;
+		
+	@include media('<=sm') {
+		margin-bottom: 40px;
+	}
 
 	&__items {
 		display: flex;
 		flex-wrap: wrap;
 		margin: 0 -70px;
+		
+		@include media('<=xxlg') {
+			margin: 0 -30px;
+		}
+		
+		@include media('<=lg') {
+			margin: 0 -20px;
+		}
 	}
 	
 	&__item {
 		padding-top: 40px;
+		border-top: 1px solid #C4C4C4;
 		margin: 0 70px 70px;
 		width: calc(99.9% / 12 * 6 - 140px);
-		border-top: 1px solid #C4C4C4;
+		
+		@include media('<=xxlg') {
+			margin: 0 30px 50px;
+			width: calc(99.9% / 12 * 6 - 60px);
+		}
+		
+		@include media('<=lg') {
+			margin: 0 20px 50px;
+			width: calc(99.9% / 12 * 6 - 40px);
+		}
+		
+		@include media('<=xs') {
+			margin: 0 20px 50px;
+			width: calc(99.9% / 12 * 12 - 40px);
+		}
 	}
 
 	&__title {
@@ -29,16 +56,18 @@
 				margin: 0 0 5px 10px;
 				vertical-align: middle;
 				background: url('#{$images-path}icons-sprite.svg#icon-arr-link-view-white') center / 19px 19px no-repeat #18325B;
+
+				@include media('<=md') {
+					width: 29px;
+					height: 29px;
+					background-size: 15px 15px;
+				}
 			}
 		}
 	}
 
 	&__text {
-
-		a {
-			display: inline-block;
-			color: #0788FF;
-			font-family: "RBB", sans-serif;
-		}
+		font-family: "RB", sans-serif;
+		line-height: 1.55;
 	}
 }

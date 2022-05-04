@@ -1,4 +1,16 @@
 .i-link {
 	$self: &;
+	display: inline-block;
+	color: #0788FF;
+	font-family: "RBB", sans-serif;
 
+	&::after {
+		display: inline-block;
+		content: '';
+		width: 15px;
+		height: 15px;
+		margin: 0 0 5px 5px;
+		vertical-align: middle;
+		background: url('#{$images-path}icons-sprite.svg#icon-arr-link-view-blue') center / 15px 15px no-repeat transparent;
+	}
 }

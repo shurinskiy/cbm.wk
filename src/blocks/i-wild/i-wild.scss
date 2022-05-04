@@ -1,6 +1,10 @@
 .i-wild {
 	$self: &;
 	margin-bottom: 170px;
+		
+	@include media('<=sm') {
+		margin-bottom: 70px;
+	}
 
 	&__title {
 		max-width: 580px;
@@ -12,6 +16,11 @@
 		flex-wrap: wrap;
 		border-top: 1px solid #000;
 		border-bottom: 1px solid #000;
+		
+		@include media('<=sm') {
+			border: 1px solid #000;
+			border-bottom: none;
+		}
 	}
 	
 	&__item {
@@ -23,14 +32,47 @@
 		
 		&:nth-child(even) {
 			border-left: 1px solid #000;
+
+			@include media('<=sm') {
+				border-left: none;
+			}
+		}
+
+		@include media('<=sm') {
+			width: 100%;
+			border: none;
+			border-bottom: 1px solid #000;
+			margin: 0;
+		}
+		
+		@include media('<=xxs') {
+			padding: 40px 20px;
 		}
 	}
 
 	&__subtitle {
-
+		margin-bottom: 20px;
 	}
 
 	&__list {
 		font-family: "RB", sans-serif;
+		line-height: 1.6;
+
+		li {
+			padding-left: 25px;
+			position: relative;
+
+			&::before {
+				display: block;
+				content: '';
+				width: 4px;
+				height: 4px;
+				border-radius: 50%;
+				background-color: #000;
+				position: absolute;
+				left: 8px;
+				top: 10px;
+			}
+		}
 	}
 }

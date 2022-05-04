@@ -1,15 +1,33 @@
 .i-block {
 	$self: &;
 	margin-bottom: 100px;
+		
+	@include media('<=sm') {
+		margin-bottom: 40px;
+	}
 
 	&__inner {
 		display: flex;
+
+		@include media('<=sm') {
+			flex-wrap: wrap;
+		}
 	}
 
 	&__image {
 		box-sizing: border-box;
 		width: calc(50% + 70px);
 		margin-left: -70px;
+		
+		@include media('<=xxlg') {
+			width: calc(50% + 30px);
+			margin-left: -30px;
+		}
+
+		@include media('<=sm') {
+			width: 100%;
+			margin: 0 0 50px;
+		}
 		
 		img {
 			display: block;
@@ -23,14 +41,31 @@
 		box-sizing: border-box;
 		width: 50%;
 		padding-left: 70px;
+		
+		@include media('<=xxlg') {
+			padding-left: 30px;
+		}
+
+		@include media('<=sm') {
+			width: 100%;
+			padding: 0;
+		}
 	}
 
 	&__breadcrumbs {
 		margin-bottom: 80px;
+		
+		@include media('<=xlg') {
+			margin-bottom: 40px;
+		}
 	}
 
 	&__title {
 		margin-bottom: 100px;
+		
+		@include media('<=xlg') {
+			margin-bottom: 60px;
+		}
 	}
 
 	&__text {
@@ -40,6 +75,10 @@
 
 		p {
 			margin-bottom: 40px;
+		
+			@include media('<=xlg') {
+				margin-bottom: 30px;
+			}
 		}
 	}
 }

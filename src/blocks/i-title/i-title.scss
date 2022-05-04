@@ -6,14 +6,46 @@
 	color: #000;
 	text-decoration: none;
 	
+	@include media('<=xlg') {
+		font-size: 65px;
+	}
+	
+	@include media('<=md') {
+		font-size: 55px;
+	}
+	
+	@include media('<=xxs') {
+		font-size: 45px;
+	}
+	
 	&_subtitle {
 		line-height: 1.2;
 		font-size: 52px;
+	
+		@include media('<=xlg') {
+			font-size: 46px;
+		}
+		
+		@include media('<=md') {
+			font-size: 40px;
+		}
+	
+		@include media('<=xxs') {
+			font-size: 35px;
+		}
 	}
 	
 	&_small {
 		line-height: 1.2;
 		font-size: 36px;
+	
+		@include media('<=xlg') {
+			font-size: 28px;
+		}
+		
+		@include media('<=md') {
+			font-size: 24px;
+		}
 	}
 
 	&_ocean {
