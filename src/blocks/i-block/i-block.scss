@@ -10,7 +10,7 @@
 		box-sizing: border-box;
 		width: calc(50% + 70px);
 		margin-left: -70px;
-
+		
 		img {
 			display: block;
 			width: 100%;
@@ -18,8 +18,9 @@
 			object-fit: cover;
 		}
 	}
-
+	
 	&__side {
+		box-sizing: border-box;
 		width: 50%;
 		padding-left: 70px;
 	}
