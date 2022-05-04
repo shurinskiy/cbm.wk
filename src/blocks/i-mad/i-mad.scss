@@ -3,7 +3,15 @@
 	margin-bottom: 170px;
 	font-size: 18px;
 	line-height: 1.7;
-	
+
+	@include media('<=xxs') {
+		font-size: 16px;
+	}
+
+	@include media('<=sm') {
+		margin-bottom: 100px;
+	}
+
 	&__title {
 		max-width: 400px;
 		margin-bottom: 40px;
@@ -13,6 +21,10 @@
 		display: flex;
 		flex-wrap: wrap;
 		margin-bottom: 70px;
+		
+		@include media('<=sm') {
+			margin-bottom: 20px;
+		}
 	}
 	
 	&__item {
@@ -22,6 +34,14 @@
 		padding: 0 40px 0 35px;
 		margin-bottom: 35px;
 		position: relative;
+		
+		@include media('<=sm') {
+			width: 100%;
+		}
+		
+		@include media('<=xxs') {
+			margin-bottom: 20px;
+		}
 
 		&::before {
 			display: block;

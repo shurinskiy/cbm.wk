@@ -44,6 +44,16 @@
 		}
 	}
 
+	&_thrid {
+
+		#{$self}__image {
+			@include media('<=sm') {
+				order: -1 !important;
+				margin-bottom: 70px;
+			}
+		}
+	}
+
 	&_reverse {
 		#{$self}__image {
 			order: 1;
@@ -136,6 +146,10 @@
 			@include media('<=xlg') {
 				margin-bottom: 30px;
 			}
+		}
+
+		@include media('<=xxs') {
+			font-size: 16px;
 		}
 	}
 }

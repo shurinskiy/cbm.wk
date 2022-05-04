@@ -15,7 +15,7 @@
 	}
 	
 	@include media('<=xxs') {
-		font-size: 45px;
+		font-size: 44px;
 	}
 	
 	&_subtitle {
@@ -30,7 +30,7 @@
 			font-size: 40px;
 		}
 	
-		@include media('<=xxs') {
+		@include media('<=xxxs') {
 			font-size: 35px;
 		}
 	}
