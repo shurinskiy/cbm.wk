@@ -3,11 +3,31 @@
 	margin-bottom: 100px;
 		
 	@include media('<=sm') {
-		margin-bottom: 40px;
+		margin-bottom: 0;
+	}
+
+	&_first {
+		#{$self}__inner {
+			align-items: flex-start;
+		}
+	}
+
+	&_reverse {
+		#{$self}__image {
+			order: 1;
+			margin: 0;
+			margin-right: -70px;
+		}
+
+		#{$self}__side {
+			padding: 0;
+			padding-right: 70px;
+		}
 	}
 
 	&__inner {
 		display: flex;
+		align-items: center;
 
 		@include media('<=sm') {
 			flex-wrap: wrap;
@@ -16,6 +36,7 @@
 
 	&__image {
 		box-sizing: border-box;
+		height: 720px;
 		width: calc(50% + 70px);
 		margin-left: -70px;
 		
@@ -25,8 +46,9 @@
 		}
 
 		@include media('<=sm') {
+			height: auto;
 			width: 100%;
-			margin: 0 0 50px;
+			margin: 0 0 50px !important;
 		}
 		
 		img {
@@ -48,7 +70,8 @@
 
 		@include media('<=sm') {
 			width: 100%;
-			padding: 0;
+			padding: 0 !important;
+			margin-bottom: 50px;
 		}
 	}
 
