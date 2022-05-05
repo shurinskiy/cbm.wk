@@ -54,6 +54,52 @@
 		}
 	}
 
+	&_fourth {
+		
+		#{$self}__inner {
+			align-items: flex-end;
+		}
+
+		#{$self}__text {
+			margin-bottom: 50px;
+			
+			@include media('<=sm') {
+				margin-bottom: 0;
+			}
+		}
+
+		#{$self}__side {
+			&::after {
+				box-sizing: border-box;
+				display: block;
+				content: '';
+				margin-top: auto;
+				border-bottom: 1px solid #c4c4c4;
+
+				@include media('<=sm') {
+					display: none;
+				}
+			}
+		}
+
+		#{$self}__image {
+			margin-bottom: -250px;
+
+			@include media('<=sm') {
+				margin-bottom: 80px;
+			}
+		}
+	}
+	
+	&_fifth {
+		#{$self}__image {
+			@include media('<=sm') {
+				margin-bottom: 80px;
+
+			}
+		}		
+	}
+
 	&_reverse {
 		#{$self}__image {
 			order: 1;
@@ -138,7 +184,7 @@
 	&__text {
 		font-family: "RB", sans-serif;
 		font-size: 18px;
-		line-height: 1.5;
+		line-height: 1.7;
 
 		p {
 			margin-bottom: 40px;

@@ -1,0 +1,31 @@
+.i-trash {
+	$self: &;
+	margin-bottom: 170px;
+	
+	@include media('<=sm') {
+		margin-bottom: 80px;
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-end;
+	}
+
+	&__item {
+		box-sizing: border-box;
+		width: 50%;
+
+		&:last-child {
+			padding-left: 50px;
+			
+			@include media('<=sm') {
+				padding-left: 0;
+			}
+		}
+
+		@include media('<=sm') {
+			width: 100%;
+		}
+	}
+}

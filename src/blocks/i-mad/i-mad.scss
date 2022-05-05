@@ -1,12 +1,6 @@
 .i-mad {
 	$self: &;
 	margin-bottom: 170px;
-	font-size: 18px;
-	line-height: 1.7;
-
-	@include media('<=xxs') {
-		font-size: 16px;
-	}
 
 	@include media('<=sm') {
 		margin-bottom: 100px;
@@ -28,36 +22,21 @@
 	}
 	
 	&__item {
-		font-family: "RBM", sans-serif;
-		box-sizing: border-box;
 		width: 50%;
-		padding: 0 40px 0 35px;
-		margin-bottom: 35px;
-		position: relative;
 		
 		@include media('<=sm') {
 			width: 100%;
-		}
-		
-		@include media('<=xxs') {
-			margin-bottom: 20px;
-		}
-
-		&::before {
-			display: block;
-			content: '';
-			width: 13px;
-			height: 13px;
-			border-radius: 50%;
-			background-color: #6E9399;
-			position: absolute;
-			left: 0;
-			top: 8px;
 		}
 	}
 	
 	&__text {
 		font-family: "RB", sans-serif;
-		max-width: 580px;
+		font-size: 18px;
+		line-height: 1.8;
+		max-width: 550px;
+
+		@include media('<=xxs') {
+			font-size: 16px;
+		}
 	}
 }
