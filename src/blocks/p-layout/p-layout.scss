@@ -6,14 +6,6 @@
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 30px;
-		
-		
-		&:nth-child(1)#{&}_bgd-up {
-			#{$self}__image::after {
-				right: 50%;
-				top: -280px;
-			}
-		}
 
 		&:nth-child(1) {
 
@@ -31,6 +23,16 @@
 					top: calc(100% - 200px);
 					z-index: -1;
 					background: url('#{$images-path}section-bg-1.png') left top / auto no-repeat transparent;
+				}
+		
+				&_bgup-1::after {
+					right: 50%;
+					top: -280px;
+				}
+		
+				&_bgup-2::after {
+					right: -45%;
+					top: -340px;
 				}
 			}
 		}
@@ -87,6 +89,11 @@
 	&__image {
 		transform: translateX(28%);
 		margin: 0 0 0 -28%;
+
+		&_plain {
+			transform: none !important;
+			margin: 0 !important;
+		}
 				
 		@include media('<=xxxlg') {
 			transform: translateX(20%);

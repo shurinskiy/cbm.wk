@@ -3,7 +3,7 @@ import scrollLock from 'scroll-lock';
 (() => {
 	const $header = $('.header');
 	const $shell = $header.find('.header__menu-blind');
-	const $toggle = $header.find('.header__menu-toggle');
+	const $toggle = $header.find('.header__menu-toggle button');
 	const vh = window.innerHeight * 0.01; // решение проблемы 100vh для меню на мобильных устройствах
 
 	$toggle.on('click', function(e) {

@@ -41,7 +41,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
-		margin: 0 -30px;
+		margin: 0 -20px;
 		
 		@include media('<=lg') {
 			margin: 0 -10px;
@@ -66,8 +66,8 @@
 	}
 	
 	&__item {
-		margin: 0 30px 65px;
-		width: calc(99.9% / 12 * 3 - 60px);
+		margin: 0 20px 65px;
+		width: calc(99.9% / 12 * 3 - 40px);
 		
 		@include media('<=lg') {
 			margin: 0 10px 65px;
@@ -99,6 +99,10 @@
 		font-size: 35px;
 		font-family: "MR", sans-serif;
 		
+		@include media('<=lg') {
+			font-size: 32px;
+		}
+		
 		@include media('<=md') {
 			font-size: 28px;
 		}
@@ -110,8 +114,8 @@
 		span {
 			display: block;
 			
-			&:last-child {
-				font-family: "MBL", sans-serif;
+			&:nth-child(2) {
+				font-family: "RWBL", sans-serif;
 			}
 		}
 	}
