@@ -1,7 +1,7 @@
 .contacts {
 	$self: &;
 	position: relative;
-	margin-bottom: 180px;
+	margin-bottom: 80px;
 
 	@include media('<=xxs') {
 		margin-bottom: 50px;
@@ -13,13 +13,13 @@
 		width: 675px;
 		height: 420px;
 		position: absolute;
-		right: -24%;
-		top: -150px;
+		right: -15%;
+		bottom: 15%;
 		z-index: -1;
 		background: url('#{$images-path}section-bg-1.png') left top / auto no-repeat transparent;
 	}
 
-	&::after {
+	/* &::after {
 		display: block;
 		content: '';
 		width: 675px;
@@ -29,7 +29,7 @@
 		top: calc(100% - 20px);
 		z-index: -1;
 		background: url('#{$images-path}section-bg-1.png') left top / auto no-repeat transparent;
-	}
+	} */
 
 	&__title {
 		margin-bottom: 35px;
@@ -56,6 +56,7 @@
 		max-width: 870px;
 		padding-right: 70px;
 		margin-bottom: 50px;
+		width: calc(55% - 50px);
 				
 		@include media('<=lg') {
 			padding-right: 50px;
@@ -74,8 +75,10 @@
 	
 	&__side {
 		margin-bottom: 20px;
-				
+		width: 45%;
+		
 		@include media('<=sm') {
+			width: 100%;
 			order: -1;
 		}
 	}
@@ -99,12 +102,11 @@
 		}
 
 		a {
-			display: block;
+			display: inline-block;
 			color: inherit;
-			text-decoration: none;
 			
 			&:hover {
-				text-decoration: underline;
+				text-decoration: none;
 			}
 		}
 	}

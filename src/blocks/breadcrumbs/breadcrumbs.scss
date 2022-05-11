@@ -8,16 +8,17 @@
 	&__item {
 		color: #112D32;
 		display: inline-block;
-		text-decoration: none;
+		// text-decoration: none;
 		font-size: 15px;
 		font-family: "MR", sans-serif;
 		margin-bottom: 20px;
-
+		
 		@include media('<=xxs') {
 			margin: 0 0 10px;
 		}
-	
+		
 		&:not(:last-child)::after {
+			display: inline-block;
 			content: '/';
 			margin-left: 5px;
 		}

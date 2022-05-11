@@ -7,6 +7,14 @@
 		align-items: center;
 		margin-bottom: 30px;
 		
+		
+		&:nth-child(1)#{&}_bgd-up {
+			#{$self}__image::after {
+				right: 50%;
+				top: -280px;
+			}
+		}
+
 		&:nth-child(1) {
 
 			#{$self}__image {
@@ -104,7 +112,7 @@
 		}
 		
 		@include media('<=sm') {
-			display: none;
+			display: none !important;
 		}
 	}
 }

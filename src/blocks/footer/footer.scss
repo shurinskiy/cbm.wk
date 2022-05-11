@@ -1,6 +1,6 @@
 .footer {
 	$self: &;
-	padding: 80px 0 20px;
+	padding: 90px 0 50px;
 	background: url('#{$images-path}footer-bg.png') center left / cover no-repeat #6D8F96;
 	color: #fff;
 
@@ -14,7 +14,7 @@
 
 	&__inner {
 		display: flex;
-		margin-bottom: 70px;
+		margin-bottom: 50px;
 
 		@include media('<=sm') {
 			flex-wrap: wrap;
@@ -34,6 +34,7 @@
 	}
 
 	&__navi-link {
+		flex-shrink: 0;
 		padding-top: 10px;
 		display: block;
 		color: #fff;
@@ -66,6 +67,77 @@
 		@include media('<=sm') {
 			margin-left: 0;
 		}
+	}
+
+	&__left {
+		margin-right: auto;
+
+		@include media('<=xs') {
+			margin-bottom: 40px;
+			width: 100%;
+		}
+	}
+
+	&__logo {
+		display: block;
+		margin-bottom: 30px;
+	}
+
+	&__address {
+		color: #fff;
+		text-decoration: none;
+		font-family: "MSB", sans-serif;
+		font-size: 15px;
+		text-transform: uppercase;
+
+		span {
+			display: block;
+			margin-bottom: 5px;
+		}
+	}
+
+	&__side {
+
+	}
+	
+	&__side-title {
+		font-family: "MSB", sans-serif;
+		font-size: 19px;
+		margin-bottom: 25px;
+
+		@include media('<=xs') {
+			display: none;
+		}
+	}
+	
+	&__side-links {
+		display: flex;
+	}
+
+	&__side-contact {
+		box-sizing: border-box;
+		padding: 10px;
+		height: 58px;
+		min-width: 180px;
+		border-radius: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #fff;
+		font-family: "MB", sans-serif;
+		text-transform: uppercase;
+		color: #000;
+		text-decoration: none;
+		margin-right: 20px;
+	}
+
+	&__side-linkd {
+		display: block;
+		text-decoration: none;
+		width: 58px;
+		height: 58px;
+		border-radius: 50%;
+		background: url('#{$images-path}icons-sprite.svg#icon-soc-linked-view-dark') center top 11px / 32px 32px no-repeat #fff;
 	}
 	
 	&__copy {
