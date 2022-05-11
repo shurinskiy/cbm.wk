@@ -1,4 +1,4 @@
-.h-rate {
+.h-side {
 	$self: &;
 	
 	@include media('<=md') {
@@ -13,6 +13,18 @@
 		align-content: center;
 		min-height: 150px;
 		position: relative;
+
+		&_logo {
+
+			img {
+				display: block;
+				margin: 0 25px 30px 0;
+			}
+
+			@include media('<=md') {
+				display: none;
+			}
+		}
 		
 		@include media('<=md') {
 			width: 50%;
@@ -32,6 +44,8 @@
 			width: 100%;
 			font-family: "GBL", sans-serif;
 			font-size: 60px;
+			line-height: 1;
+			margin-bottom: 5px;
 			
 			@include media('<=sm') {
 				font-size: 55px;
@@ -49,17 +63,17 @@
 		span:nth-child(2) {
 			display: block;
 			width: 100%;
-			font-family: "MB", sans-serif;
+			font-family: "MSB", sans-serif;
 			font-size: 10px;
 			text-transform: uppercase;
-			margin-bottom: 30px;
+			// margin-bottom: 30px;
 			
 			@include media('<=sm') {
-				margin-bottom: 10px;
+				// margin-bottom: 10px;
 			}
 		}
 
-		&:not(:last-child)::after {
+		&::after {
 			display: block;
 			content: '';
 			height: 1px;

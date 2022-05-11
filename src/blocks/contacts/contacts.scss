@@ -1,6 +1,11 @@
 .contacts {
 	$self: &;
 	position: relative;
+	margin-bottom: 180px;
+
+	@include media('<=xxs') {
+		margin-bottom: 50px;
+	}
 
 	&::before {
 		display: block;

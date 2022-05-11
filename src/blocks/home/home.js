@@ -36,7 +36,7 @@ import Swiper, { Mousewheel, Pagination } from 'swiper';
 		breakpoint.addEventListener('change', breakpointChecker);
 		breakpointChecker();
 	
-		$('.home__side[data-scrollable]').on('mousewheel', function(e) {
+		$('.home__middle[data-scrollable]').on('mousewheel', function(e) {
 			e.stopPropagation();
 		});
 	}

@@ -36,11 +36,13 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: center right;
+		overflow: hidden;
 		
 		@include media('<=md') {
 			height: auto !important;
 			display: block;
 			padding: 120px 20px;
+			overflow: auto;
 		}
 		
 		@include media('<=xxs') {
@@ -57,7 +59,7 @@
 				padding: 160px 20px 60px;
 			}
 
-			#{$self}__main {
+			#{$self}__left {
 				margin-left: 9%;
 				max-width: 465px;
 
@@ -91,7 +93,7 @@
 
 		&_second {
 
-			#{$self}__main {
+			#{$self}__left {
 				margin-left: 9%;
 
 				@include media('<=lg') {
@@ -116,17 +118,30 @@
 				max-width: 465px;
 			}
 
-			#{$self}__side {
-				margin: 12% 0 0 70px;
+			#{$self}__middle {
+				margin: 12% auto 0 70px;
 				
 				@include media('<=md') {
 					margin: 0;
 				}
 			}
+
+			#{$self}__side {
+				align-self: flex-start;
+				margin: 70px -20px 0 0;
+				
+				@include media('<=xlg') {
+					margin-left: -80px;
+				}
+				
+				@include media('<=lg') {
+					margin-left: -180px;
+				}
+			}
 		}
 
 		&_thrid {
-			justify-content: space-evenly;
+			justify-content: space-between;
 
 			#{$self}__title {
 				max-width: 400px;
@@ -136,7 +151,8 @@
 				}
 			}
 
-			#{$self}__main {
+			#{$self}__left {
+				margin-left: 9%;
 				margin-right: 50px;
 				
 				@include media('<=xlg') {
@@ -148,23 +164,39 @@
 				}
 			}
 
-			#{$self}__side {
+			#{$self}__middle {
 				max-width: 550px;
 				max-height: 590px;
+				// margin-left: auto;
 
 				@include media('<=md') {
 					max-width: 100%;
 				}
 			}
+
+			#{$self}__side {
+				align-self: flex-start;
+				padding-left: 20px;
+				margin: 70px -20px 0 0;
+				
+				@include media('<=xlg') {
+					max-width: 200px;
+				}
+
+				@include media('<=lg') {
+					display: none;
+				}
+			}
 		}
 
 		&_four {
+			position: relative;
 					
 			@include media('<=xxs') {
 				padding-bottom: 20px;
 			}
 	
-			#{$self}__main {
+			#{$self}__left {
 				margin-left: 9%;
 				margin-right: 50px;
 
@@ -199,18 +231,24 @@
 				}
 			}
 
-			#{$self}__side {
+			#{$self}__middle {
 				margin-left: auto;
 				align-self: flex-end;
 	
 				@include media('<=lg') {
-					align-self: center;
+					// align-self: center;
 				}
+			}
+
+			#{$self}__side {
+				position: absolute;
+				right: 0;
+				top: 18%;
 			}
 		}
 	}
 
-	&__main {
+	&__left {
 		margin-bottom: 55px;
 		max-width: 800px;
 	}
@@ -275,8 +313,13 @@
 		}
 	}
 
-	&__side {
+	&__middle {
+		box-sizing: border-box;
+	}
 
+	&__side {
+		box-sizing: border-box;
+		flex-shrink: 0;
 	}
 
 	&__tiles {
@@ -295,7 +338,7 @@
 			left: 20px;
 		}
 		
-		@include media('<=sm') {
+		@include media('<=md') {
 			display: none;
 		}
 	}

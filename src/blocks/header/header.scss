@@ -95,10 +95,11 @@
 		width: 100%;
 		max-width: 700px;
 		justify-content: space-between;
-		margin-right: 40px;
+		margin: 0 40px 0 auto;
 		
 		@include media('<=lg') {
-			margin-right: 0;
+			font-size: 14px;
+			margin-right: 10px;
 		}
 
 		@include media('<=md') {
@@ -122,7 +123,7 @@
 	&__menu-toggle {
 		@extend %reset-button;
 		flex-shrink: 0;
-		margin: 0 20px 0 auto;
+		margin: 0 20px 0 0;
 		font-family: "MSB", sans-serif;
 		font-size: 15px;
 		color: #fff;
@@ -142,10 +143,14 @@
 			text-shadow: 1px 1px 15px rgba(255, 255, 255), -1px -1px 15px rgba(255, 255, 255);
 		}
 	
-		@include media('<=xs') {
+		@include media('<=md') {
+			margin: 0 20px 0 auto;
+		}
+	
+		@include media('<=lg') {
+			font-size: 14px;
 			padding: 13px 20px 13px 0;
 			width: 210px;
-			font-size: 14px;
 			background-size: 22px 14px;
 		}
 		
