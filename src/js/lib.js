@@ -200,3 +200,30 @@ export const makeParallax = (items, name = "parallax") => {
 		translateY();
 	}
 }
+
+
+export const addUnderlay = function(cls) {
+	if(! document.querySelector(`.${cls}__underlay`)) {
+		const _underlay = document.createElement('div');
+		const _body = document.createElement('div');
+		const _close = document.createElement('span');
+		const _content = document.createElement('div');
+		
+		_underlay.className = `${cls}`;
+		_underlay.id = `${cls}__underlay`;
+		_underlay.setAttribute('data-scroll-lock-scrollable', '');
+		_body.className = `${cls}__body`;
+		_close.className = `${cls}__close`;
+		_content.className = `${cls}__content`;
+
+		_body.append(_close);
+		_body.append(_content);
+		_underlay.append(_body);
+		document.body.append(_underlay);
+	}
+}
+
+
+
+
+

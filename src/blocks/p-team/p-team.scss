@@ -10,7 +10,7 @@
 		margin-bottom: 40px;
 	}
 
-	&__text {
+	&__intro {
 		font-family: "RBL", sans-serif;
 		font-size: 50px;
 		line-height: 1.2;
@@ -68,6 +68,10 @@
 	&__item {
 		margin: 0 20px 65px;
 		width: calc(99.9% / 12 * 3 - 40px);
+
+		&[data-modal] {
+			cursor: pointer;
+		}
 		
 		@include media('<=lg') {
 			margin: 0 10px 65px;
@@ -89,6 +93,10 @@
 		@include media('<=xxxs') {
 			width: calc(99.9% / 12 * 12 - 20px);
 		}
+	}
+
+	&__wrapper {
+		
 	}
 
 	&__image {
@@ -118,5 +126,9 @@
 				font-family: "RWBL", sans-serif;
 			}
 		}
+	}
+
+	&__text {
+		display: none;
 	}
 }
