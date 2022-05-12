@@ -1,6 +1,26 @@
 .p-layout {
 	$self: &;
 
+	&_bgdwn {
+		position: relative;
+		
+		&::after {
+			display: block;
+			content: '';
+			width: 760px;
+			height: 470px;
+			position: absolute;
+			right: -11%;
+			bottom: 20px;
+			z-index: -1;
+			background: url('#{$images-path}section-bg-2.png') left top / auto no-repeat transparent;
+	
+			@include media('<=xxs') {
+				display: none;
+			}
+		}
+	}
+
 	&__section {
 		display: flex;
 		justify-content: space-between;

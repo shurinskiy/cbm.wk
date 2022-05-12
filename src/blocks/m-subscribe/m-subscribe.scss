@@ -1,0 +1,74 @@
+.m-subscribe {
+	$self: &;
+
+	&__inner {
+		margin-bottom: 70px;
+		display: flex;
+		justify-content: space-between;
+	
+		@include media('<=md') {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__form {
+		max-width: 800px;
+		margin: 0 30px 60px 0;
+		
+		@include media('<=md') {
+			max-width: none;
+			margin: 0 0 60px 0;
+		}
+	}
+
+	&__title {
+		margin-bottom: 55px;
+	}
+
+	&__side {
+		max-width: 480px;
+		
+		@include media('<=md') {
+			display: flex;
+			flex-wrap: wrap;
+			max-width: none;
+		}
+		
+		@include media('<=sm') {
+			display: block;
+		}
+	}
+
+	&__side-block {
+		margin-bottom: 30px;
+
+		h3 {
+			font-family: "RWBL", sans-serif;
+			font-size: 30px;
+			line-height: 1;
+			color: #112D32;
+			margin-bottom: 15px;
+			
+			@include media('<=md') {
+				font-size: 24px;
+			}
+			
+			@include media('<=xxs') {
+				font-size: 20px;
+			}
+		}
+
+		p {
+			line-height: 1.5;
+			font-size: 20px;
+			
+			@include media('<=xxs') {
+				font-size: 18px;
+			}
+			
+			@include media('<=xxxs') {
+				font-size: 16px;
+			}
+		}
+	}
+}

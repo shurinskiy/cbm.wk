@@ -1,0 +1,123 @@
+.m-process {
+	$self: &;
+	padding: 100px 0;
+
+	&_light {
+		background-color: #EDF3F4;
+	}
+
+	&_bgup {
+		position: relative;
+	
+		&::before {
+			display: block;
+			content: '';
+			width: 675px;
+			height: 420px;
+			position: absolute;
+			right: -10%;
+			top: -20px;
+			z-index: -1;
+			background: url('#{$images-path}section-bg-1.png') left top / auto no-repeat transparent;
+		}
+	}
+
+	&__title {
+		margin-bottom: 100px;
+		
+		@include media('<=sm') {
+			margin-bottom: 70px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		box-sizing: border-box;
+		width: 50%;
+		padding-right: 20px;
+		margin-bottom: 60px;
+
+		&_notitle {
+			padding-top: 85px;
+			
+			@include media('<=sm') {
+				padding-top: 0;
+			}
+		}
+		
+		@include media('<=sm') {
+			width: 100%;
+			margin-bottom: 30px;
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 30px;
+	}
+
+	&__list {
+		font-size: 20px;
+		line-height: 1.4;
+		max-width: 480px;
+		
+		@include media('<=md') {
+			font-size: 18px;
+		}
+		
+		@include media('<=sm') {
+			max-width: 550px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 16px;
+		}
+
+		li {
+			box-sizing: border-box;
+			padding: 0 0 0 35px;
+			margin-bottom: 20px;
+			position: relative;
+			
+			@include media('<=xxs') {
+				padding: 0 0 0 25px;
+				margin-bottom: 15px;
+			}
+	
+			&::before {
+				display: block;
+				content: '';
+				width: 13px;
+				height: 13px;
+				border-radius: 50%;
+				background-color: #008698;
+				position: absolute;
+				left: 0;
+				top: 8px;
+			
+				@include media('<=xxs') {
+					width: 10px;
+					height: 10px;
+					top: 5px;
+				}
+			}
+		}
+	}
+
+	&__link {
+		display: block;
+		color: #008698;
+		font-family: sans-serif;
+		font-family: "MBL", sans-serif;
+		font-size: 15px;
+		text-transform: uppercase;
+		margin-top: -30px;
+		
+		@include media('<=sm') {
+			margin-top: -10px;
+		}
+	}
+}
