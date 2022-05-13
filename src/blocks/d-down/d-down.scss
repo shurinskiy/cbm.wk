@@ -77,11 +77,11 @@
 		
 		span {
 			display: block;
-			padding: 5px 30px;
+			padding: 10px 30px;
 			// margin: 0 -15px;
 			
 			@include media('<=xxs') {
-				padding: 5px 15px;
+				padding: 10px 15px;
 			}
 		}
 	}

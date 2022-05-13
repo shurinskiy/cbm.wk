@@ -6,3 +6,4 @@ import "../blocks/p-video/p-video.js";
 import "../blocks/tab/tab.js";
 import "../blocks/i-hard/i-hard.js";
 import "../blocks/modal/modal.js";
+import "../blocks/m-explore/m-explore.js";
