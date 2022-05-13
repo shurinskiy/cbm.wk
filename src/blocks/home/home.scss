@@ -74,10 +74,7 @@
 			}
 
 			#{$self}__text {
-				
-				@include media('<=md') {
-					max-width: 500px;
-				}
+				max-width: 500px;
 			}
 
 			#{$self}__side {
@@ -115,7 +112,7 @@
 			}
 
 			#{$self}__text {
-				max-width: 465px;
+				max-width: 430px;
 			}
 
 			#{$self}__middle {
