@@ -1,6 +1,22 @@
 .p-roles {
 	$self: &;
 	margin-bottom: 130px;
+	
+	&_decored {
+		position: relative;
+	
+		&::after {
+			display: block;
+			content: '';
+			position: absolute;
+			right: -29%;
+			top: -250px;
+			z-index: -1;
+			width: 760px;
+			height: 470px;
+			background: url('#{$images-path}section-bg-2.png') left top / auto no-repeat transparent;
+		}
+	}
 
 	&__title {
 		margin-bottom: 35px;

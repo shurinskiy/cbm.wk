@@ -1,23 +1,19 @@
 .p-layout {
 	$self: &;
 
-	&_bgdwn {
+	&_decor-1 {
 		position: relative;
-		
-		&::after {
+
+		&::before {
 			display: block;
 			content: '';
-			width: 760px;
-			height: 470px;
+			width: 675px;
+			height: 420px;
 			position: absolute;
-			right: -11%;
-			bottom: 20px;
+			top: -110px;
+			right: -150px;
 			z-index: -1;
-			background: url('#{$images-path}section-bg-2.png') left top / auto no-repeat transparent;
-	
-			@include media('<=xxs') {
-				display: none;
-			}
+			background: url('#{$images-path}section-bg-1.png') left top / auto no-repeat transparent;
 		}
 	}
 
@@ -26,55 +22,6 @@
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 30px;
-
-		&:nth-child(1) {
-
-			#{$self}__image {
-				position: relative;
-				align-self: flex-start;
-	
-				&::after {
-					display: block;
-					content: '';
-					width: 675px;
-					height: 420px;
-					position: absolute;
-					right: 40%;
-					top: calc(100% - 200px);
-					z-index: -1;
-					background: url('#{$images-path}section-bg-1.png') left top / auto no-repeat transparent;
-				}
-		
-				&_bgup-1::after {
-					right: 50%;
-					top: -280px;
-				}
-		
-				&_bgup-2::after {
-					right: -45%;
-					top: -340px;
-				}
-			}
-		}
-		
-		&:nth-child(2) {
-
-			#{$self}__image {
-				position: relative;
-	
-				&::after {
-					display: block;
-					content: '';
-					width: 675px;
-					height: 420px;
-					position: absolute;
-					left: 55%;
-					top: calc(100% - 230px);
-					z-index: -1;
-					background: url('#{$images-path}section-bg-1.png') left top / auto no-repeat transparent;
-				}
-			}
-		}
 
 		&:nth-child(even) {
 			
@@ -107,14 +54,65 @@
 	}
 
 	&__image {
+		position: relative;
 		transform: translateX(28%);
 		margin: 0 0 0 -28%;
+
+		&::after {
+			display: none;
+			content: '';
+			width: 675px;
+			height: 420px;
+			position: absolute;
+			right: 40%;
+			top: calc(100% - 200px);
+			z-index: -1;
+			background: url('#{$images-path}section-bg-1.png') left top / auto no-repeat transparent;
+		}
+		
+		&_up {
+			align-self: flex-start;
+		}
 
 		&_plain {
 			transform: none !important;
 			margin: 0 !important;
 		}
-				
+
+		&_shift-1 {
+			margin-top: -700px;
+		}
+
+		&_decor-1::after {
+			display: block;
+		}
+
+		&_decor-2::after {
+			display: block;
+			left: 55%;
+			top: calc(100% - 230px);
+		}
+
+		&_decor-3::after {
+			display: block;
+			right: auto;
+			left: -280px;
+			top: -210px;
+		}
+
+		&_decor-4::after {
+			display: block;
+			background-image: url('#{$images-path}section-bg-3.png');
+			right: 30px;
+			top: calc(100% - 200px);
+		}
+		
+		&_decor-5::after {
+			display: block;
+			top: calc(100% - 30px);
+			right: 20%;
+		}
+			
 		@include media('<=xxxlg') {
 			transform: translateX(20%);
 			margin: 0 0 0 -20%;
@@ -141,5 +139,9 @@
 		@include media('<=sm') {
 			display: none !important;
 		}
+	}
+
+	&__text {
+		max-width: 1150px;
 	}
 }

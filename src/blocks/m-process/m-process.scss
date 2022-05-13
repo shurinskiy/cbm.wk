@@ -1,25 +1,36 @@
 .m-process {
 	$self: &;
 	padding: 100px 0;
+	position: relative;
+	
+	&::before {
+		display: none;
+		content: '';
+		width: 675px;
+		height: 420px;
+		position: absolute;
+		right: -10%;
+		top: -20px;
+		z-index: -1;
+		background: url('#{$images-path}section-bg-1.png') left top / auto no-repeat transparent;
+	}
 
 	&_light {
 		background-color: #EDF3F4;
 	}
-
-	&_bgup {
-		position: relative;
 	
-		&::before {
-			display: block;
-			content: '';
-			width: 675px;
-			height: 420px;
-			position: absolute;
-			right: -10%;
-			top: -20px;
-			z-index: -1;
-			background: url('#{$images-path}section-bg-1.png') left top / auto no-repeat transparent;
-		}
+	&_small-gaps {
+		padding: 20px 0;
+	}
+
+	&_decor-1::before {
+		display: block;
+	}
+
+	&_decor-2::before {
+		display: block;
+		right: -30px;
+		top: -200px;
 	}
 
 	&__title {
@@ -105,6 +116,12 @@
 				}
 			}
 		}
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 1.4;
+		max-width: 560px;
 	}
 
 	&__link {
