@@ -1,82 +1,86 @@
 .t-block {
-	$self: &;
+  $self: &;
 
-	&_small {
-		max-width: 640px;
+  &_small {
+    max-width: 640px;
 
-		@include media('<=sm') {
-			max-width: none;
-		}
-	}
+    @include media("<=sm") {
+      max-width: none;
+    }
+  }
 
-	&__title {
-		margin-bottom: 30px;
-		position: relative;
-		z-index: 1;
+  &__title {
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 1;
 
-		&_wide {
-			margin: 0 -150px 30px 0;
-			
-			@include media('<=sm') {
-				margin: 0 0 30px 0;
-			}
-		}
-		
-		@include media('<=sm') {
-			max-width: 500px;
-		}
-	}
+    &_wide {
+      margin: 0 -150px 30px 0;
 
-	&__text {
-		font-size: 18px;
-		line-height: 1.4;
-		margin-bottom: 30px;
-		
-		@include media('<=xs') {
-			font-size: 16px;
-		}
+      @include media("<=sm") {
+        margin: 0 0 30px 0;
+      }
+    }
 
-		&_large {
-			font-family: "RBL", sans-serif;
-			font-size: 50px;
-			line-height: 1.2;
-			margin-bottom: 100px;
-			
-			p {
-				margin-bottom: 30px;
-			}
-			
-			@include media('<=xxlg') {
-				font-size: 45px;
-			}
-			
-			@include media('<=xlg') {
-				font-size: 40px;
-				margin-bottom: 80px;
-			}
-			
-			@include media('<=lg') {
-				margin-bottom: 50px;
-			}
-			
-			@include media('<=md') {
-				margin-bottom: 30px;
-				font-size: 30px;
-			}
-	
-			@include media('<=xxs') {
-				font-size: 20px;
-			}
-		}
-	}
+    @include media("<=sm") {
+      max-width: 500px;
+    }
+  }
 
-	&__sign {
-		font-family: "RWBL", sans-serif;
-		font-size: 35px;
-		margin-bottom: 35px;
-	}
+  &__text {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 30px;
 
-	&__button {
-		margin-bottom: 30px;		
-	}
+    b {
+      font-family: "RWBL", sans-serif;
+    }
+
+    @include media("<=xs") {
+      font-size: 16px;
+    }
+
+    &_large {
+      font-family: "RBL", sans-serif;
+      font-size: 50px;
+      line-height: 1.2;
+      margin-bottom: 100px;
+
+      p {
+        margin-bottom: 30px;
+      }
+
+      @include media("<=xxlg") {
+        font-size: 45px;
+      }
+
+      @include media("<=xlg") {
+        font-size: 40px;
+        margin-bottom: 80px;
+      }
+
+      @include media("<=lg") {
+        margin-bottom: 50px;
+      }
+
+      @include media("<=md") {
+        margin-bottom: 30px;
+        font-size: 30px;
+      }
+
+      @include media("<=xxs") {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__sign {
+    font-family: "RWBL", sans-serif;
+    font-size: 35px;
+    margin-bottom: 35px;
+  }
+
+  &__button {
+    margin-bottom: 30px;
+  }
 }
