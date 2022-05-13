@@ -49,6 +49,13 @@
 		
 		@include media('<=xxs') {
 			font-size: 30px;
+			background-position: center right 20px;
+			background-size:  27px 14px;
+			border-width: 1px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 24px;
 		}
 	}
 
@@ -62,10 +69,18 @@
 		font-family: "RWBL", sans-serif;
 		font-size: 30px;
 		margin-bottom: 20px;
-		max-width: 580px;
+		max-width: 600px;
+
+		a {
+			color: #008698;
+		}
 		
 		@include media('<=xxs') {
 			font-size: 24px;
+		}
+		
+		@include media('<=xxxs') {
+			font-size: 20px;
 		}
 	}
 

@@ -10,11 +10,11 @@
 		});
 		
 		if ($self.hasClass('opened')) {
-			$block.slideToggle(400, function() {
+			$block.slideUp(400, function() {
 				$self.removeClass('opened');
 			});
 		} else {
-			$block.slideToggle(400);
+			$block.slideDown(400);
 			$self.addClass('opened');
 		}
 	});

@@ -1,6 +1,10 @@
 .p-layout {
 	$self: &;
 
+	&_materials {
+		margin-bottom: 80px;
+	}
+
 	&_decor-1 {
 		position: relative;
 
@@ -111,6 +115,13 @@
 			display: block;
 			top: calc(100% - 30px);
 			right: 20%;
+		}
+
+		&_decor-6::after {
+			display: block;
+			right: 50%;
+			top: auto;
+			bottom: -150px;
 		}
 			
 		@include media('<=xxxlg') {
