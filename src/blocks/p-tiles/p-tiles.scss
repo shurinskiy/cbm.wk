@@ -2,6 +2,23 @@
 	$self: &;
 	padding-top: 50px;
 	margin-bottom: 80px;
+	
+	&_decored {
+		margin-bottom: 180px;
+		position: relative;
+
+		&::after {
+			display: block;
+			content: '';
+			width: 760px;
+			height: 470px;
+			position: absolute;
+			bottom: -250px;
+			right: -50px;
+			z-index: -1;
+			background: url('#{$images-path}section-bg-2.png') left top / auto no-repeat transparent;
+		}
+	}
 
 	&__title {
 		margin-bottom: 50px;
@@ -27,6 +44,11 @@
 		background-position: left top 20px;
 		background-repeat: no-repeat;
 		background-color: transparent;
+
+		&_strong {
+			font-family: "RWBL", sans-serif;
+			font-size: 35px;
+		}
 		
 		@include media('<=xlg') {
 			margin: 0 30px 20px;
@@ -70,6 +92,16 @@
 		&:nth-child(4) {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-idea-view-black');
 			background-size: 58px 58px;
+		}
+
+		&:nth-child(5) {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-help-view-black');
+			background-size: 52px 53px;
+		}
+		
+		&:nth-child(6) {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-cloud-view-black');
+			background-size: 54px 51px;
 		}
 	}
 }
