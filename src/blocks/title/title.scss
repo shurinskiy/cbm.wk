@@ -1,20 +1,20 @@
 .title {
 	$self: &;
 	font-family: "RWBL", sans-serif;
-	font-size: 100px;
+	font-size: 80px;
 	color: #112D32;
 	line-height: 1.0;
 
 	@include media('<=xxlg') {
-		font-size: 90px;
+		font-size: 70px;
 	}
 
 	@include media('<=xlg') {
-		font-size: 80px;
+		font-size: 60px;
 	}
 
 	@include media('<=sm') {
-		font-size: 60px;
+		font-size: 50px;
 	}
 
 	@include media('<=xxs') {
@@ -22,26 +22,26 @@
 	}
 
 	&_subtitle {
-		font-size: 55px;
+		font-size: 36px;
 		
 		@include media('<=xxlg') {
-			font-size: 50px;
+			font-size: 32px;
 		}
 		
 		@include media('<=xlg') {
-			font-size: 45px;
+			font-size: 28px;
 		}
 
 		@include media('<=md') {
-			font-size: 35px;
+			font-size: 24px;
 		}
 
 		@include media('<=xxs') {
-			font-size: 25px;
+			// font-size: 25px;
 		}
 	}
 	
-	span {
+	/* span {
 		display: block;
 		font-family: "RBL", sans-serif;
 		font-size: 50px;
@@ -63,5 +63,5 @@
 		@include media('<=xxs') {
 			font-size: 20px;
 		}
-	}
+	} */
 }

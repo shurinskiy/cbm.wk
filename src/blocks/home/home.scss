@@ -80,6 +80,11 @@
 			#{$self}__side {
 				max-width: 270px;
 				margin: 0 -20px 0 auto;
+
+				.h-side__item_logo {
+					width: 427px;
+					margin-left: -160px;
+				}
 			
 				@include media('<=md') {
 					max-width: none;
@@ -177,7 +182,7 @@
 				margin: 70px -20px 0 0;
 				
 				@include media('<=xlg') {
-					max-width: 200px;
+					max-width: 220px;
 				}
 
 				@include media('<=lg') {
