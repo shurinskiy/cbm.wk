@@ -203,7 +203,7 @@ export const makeParallax = (items, name = "parallax") => {
 
 
 export const addUnderlay = function(cls) {
-	if(! document.querySelector(`.${cls}__underlay`)) {
+	if(! document.querySelector(`#${cls}__underlay`)) {
 		const _underlay = document.createElement('div');
 		const _body = document.createElement('div');
 		const _close = document.createElement('span');

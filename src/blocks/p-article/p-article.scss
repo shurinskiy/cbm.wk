@@ -52,7 +52,7 @@
 
 	&__text {
 		font-family: "RBL", sans-serif;
-		font-size: 50px;
+		font-size: 36px;
 		line-height: 1.2;
 
 		p {
@@ -72,11 +72,11 @@
 		}
 		
 		@include media('<=xxlg') {
-			font-size: 45px;
+			font-size: 34px;
 		}
 		
 		@include media('<=xlg') {
-			font-size: 40px;
+			font-size: 32px;
 		}
 
 		@include media('<=md') {
@@ -86,6 +86,5 @@
 		@include media('<=xxs') {
 			font-size: 20px;
 		}
-
 	}
 }

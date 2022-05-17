@@ -124,9 +124,13 @@
 	}
 
 	&__text {
-		font-size: 18px;
+		font-size: 20px;
 		line-height: 1.4;
 		max-width: 560px;
+
+		@include media('<=xs') {
+			font-size: 18px;
+		}
 	}
 
 	&__link {
