@@ -73,7 +73,7 @@
 			margin-bottom: 0;
 		}
 
-		&:nth-child(even) {
+		&:nth-child(even), &_reverse {
 			
 			#{$self}__image {
 				order: -1;
@@ -235,6 +235,21 @@
 			right: 12%;
 			top: auto;
 			bottom: -200px;
+		}
+
+		&_decor-10::after {
+			display: block;
+			z-index: 1;
+			width: 760px;
+			height: 470px;
+			right: auto;
+			left: 85px;
+			top: -230px;
+			background-image: url('#{$images-path}section-bg-4.png');
+
+			@include media('<=lg') {
+				display: none;
+			}
 		}
 			
 		@include media('<=xxxlg') {

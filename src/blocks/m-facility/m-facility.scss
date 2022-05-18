@@ -1,9 +1,10 @@
 .m-facility {
 	$self: &;
 	margin-bottom: 120px;
+	position: relative;
+	z-index: 2;
 
 	&_decor-1 {
-		position: relative;
 
 		&::before {
 			display: block;
@@ -97,6 +98,34 @@
 
 		&_locations::before {
 			background-image: url('#{$images-path}icons-sprite.svg#icon-facility-5-view-black');
+		}
+
+		&_embrace::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-facility-7-view-black');
+			background-size: 125px 95px;
+		}
+		
+		&_commit::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-facility-8-view-black');
+		}
+		
+		&_respect::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-facility-9-view-black');
+		}
+		
+		&_ignite::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-facility-10-view-black');
+			background-size: 115px 125px;
+		}
+		
+		&_teams::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-facility-11-view-black');
+			background-size: 125px 110px;
+		}
+		
+		&_give::before {
+			background-image: url('#{$images-path}icons-sprite.svg#icon-facility-12-view-black');
+			background-size: 125px 115px;
 		}
 	}
 }
