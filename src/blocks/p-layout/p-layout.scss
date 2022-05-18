@@ -1,17 +1,20 @@
 .p-layout {
 	$self: &;
 
-	&_equal {
-		
-	}
-
-
 	&_materials {
 		margin-bottom: 80px;
 	}
 
 	&_shift-1 {
 		margin-top: -140px;
+		
+		@include media('<=xlg') {
+			margin-top: -100px;
+		}
+
+		@include media('<=lg') {
+			margin-top: 0;
+		}
 	}
 
 	&_decor-1 {
@@ -55,7 +58,17 @@
 		&_no-bottom {
 			margin-bottom: 0;
 		}
-	
+
+		&_equal {
+			#{$self}__side {
+				width: 50%;
+			}
+			
+			#{$self}__image {
+				width: 50%;
+			}
+		}
+		
 		@include media('<=sm') {
 			margin-bottom: 0;
 		}
@@ -115,7 +128,7 @@
 
 		@include media('<=sm') {
 			// max-width: none;
-			width: 100%;
+			width: 100% !important;
 			padding: 0 !important;
 		}
 	}
