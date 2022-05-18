@@ -1,7 +1,8 @@
 .footer {
 	$self: &;
 	padding: 90px 0 50px;
-	background: url('#{$images-path}footer-bg.png') center left / cover no-repeat #6D8F96;
+	// background: url('#{$images-path}footer-bg.png') center left / cover no-repeat #6D8F96;
+	background-color: #112D32;
 	color: #fff;
 
 	@include media('<=xxxlg') {

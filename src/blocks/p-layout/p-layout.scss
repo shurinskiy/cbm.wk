@@ -21,46 +21,103 @@
 		}
 	}
 
+	&_decor-2 {
+		position: relative;
+
+		&::after {
+			display: block;
+			content: '';
+			width: 675px;
+			height: 420px;
+			position: absolute;
+			bottom: -175px;
+			right: -150px;
+			z-index: -1;
+			background: url('#{$images-path}section-bg-3.png') left top / auto no-repeat transparent;
+		}
+	}
+
 	&__section {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 30px;
+		margin-bottom: 70px;
+
+		@include media('<=sm') {
+			margin-bottom: 0;
+		}
 
 		&:nth-child(even) {
 			
 			#{$self}__image {
 				order: -1;
-				transform: translateX(-28%);
-				margin: 0 -28% 0 0;
+				// transform: translateX(-28%);
+				// margin: 0 -28% 0 0;
+				
+				img {
+					transform: translateX(-60px);
+				}
 				
 				@include media('<=xxxlg') {
-					transform: translateX(-20%);
-					margin: 0 -20% 0 0;
+					// transform: translateX(-20%);
+					// margin: 0 -20% 0 0;
 				}
 				
 				@include media('<=xxlg') {
-					transform: translateX(-10%);
-					margin: 0 -10% 0 0;
+					// transform: translateX(-10%);
+					// margin: 0 -10% 0 0;
+				}
+			}
+
+			#{$self}__side {
+				padding: 0 0 0 70px;
+
+				@include media('<=xlg') {
+					padding: 0 0 0 50px;
+				}
+
+				@include media('<=lg') {
+					padding: 0 0 0 30px;
 				}
 			}
 		}
 	}
 
 	&__side {
-		max-width: 50%;
+		box-sizing: border-box;
+		// max-width: 50%;
+		width: calc(50% - 50px);
 		position: relative;
 		z-index: 1;
+		padding: 0 70px 0 0;
+		
+		@include media('<=xlg') {
+			width: 55%;
+			padding: 0 50px 0 0;
+		}
+		
+		@include media('<=lg') {
+			padding: 0 30px 0 0;
+		}
 
 		@include media('<=sm') {
-			max-width: none;
+			// max-width: none;
+			width: 100%;
+			padding: 0 !important;
 		}
 	}
 
 	&__image {
+		box-sizing: border-box;
 		position: relative;
-		transform: translateX(28%);
-		margin: 0 0 0 -28%;
+		// transform: translateX(28%);
+		// margin: 0 0 0 -28%;
+		width: calc(50% + 50px);
+
+		img {
+			max-width: calc(100% + 60px);
+		}
+
 
 		&::after {
 			display: none;
@@ -79,8 +136,13 @@
 		}
 
 		&_plain {
-			transform: none !important;
-			margin: 0 !important;
+			text-align: center;
+
+			img {
+				max-width: 100%;
+				transform: none !important;
+			}
+			// margin: 0 !important;
 		}
 
 		&_shift-1 {
@@ -125,26 +187,24 @@
 		}
 			
 		@include media('<=xxxlg') {
-			transform: translateX(20%);
-			margin: 0 0 0 -20%;
+			// transform: translateX(20%);
+			// margin: 0 0 0 -20%;
 		}
 				
 		@include media('<=xxlg') {
-			transform: translateX(10%);
-			margin: 0 0 0 -10%;
-		}
-				
-		@include media('<=xxlg') {
-			max-width: 650px;
+			// transform: translateX(10%);
+			// margin: 0 0 0 -10%;
+			// max-width: 650px;
 			flex-shrink: 0;
 		}
 		
 		@include media('<=xlg') {
-			max-width: 550px;
+			// max-width: 550px;
+			width: 45%;
 		}
 		
 		@include media('<=lg') {
-			max-width: 400px;
+			// max-width: 400px;
 		}
 		
 		@include media('<=sm') {

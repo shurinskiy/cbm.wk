@@ -33,8 +33,18 @@
 		top: -200px;
 	}
 
+	&_decor-3::before {
+		display: block;
+		right: -50px;
+		top: -40px;
+	}
+
 	&__title {
 		margin-bottom: 100px;
+
+		&_short {
+			max-width: 590px;
+		}
 		
 		@include media('<=sm') {
 			margin-bottom: 70px;
@@ -53,7 +63,7 @@
 		margin-bottom: 60px;
 
 		&_notitle {
-			padding-top: 85px;
+			padding-top: 75px;
 			
 			@include media('<=sm') {
 				padding-top: 0;
@@ -71,20 +81,20 @@
 	}
 
 	&__list {
-		font-size: 20px;
+		font-size: 24px;
 		line-height: 1.4;
-		max-width: 480px;
+		max-width: 630px;
 		
 		@include media('<=md') {
-			font-size: 18px;
+			font-size: 20px;
 		}
 		
 		@include media('<=sm') {
-			max-width: 550px;
+			// max-width: 550px;
 		}
 		
-		@include media('<=xxxs') {
-			font-size: 16px;
+		@include media('<=xxs') {
+			font-size: 18px;
 		}
 
 		a {
@@ -112,7 +122,7 @@
 				background-color: #008698;
 				position: absolute;
 				left: 0;
-				top: 8px;
+				top: 9px;
 			
 				@include media('<=xxs') {
 					width: 10px;
@@ -124,16 +134,40 @@
 	}
 
 	&__text {
-		font-size: 20px;
+		font-size: 24px;
 		line-height: 1.4;
 		max-width: 560px;
 
-		@include media('<=xs') {
+		@include media('<=md') {
+			font-size: 20px;
+		}
+
+		@include media('<=xxs') {
 			font-size: 18px;
 		}
 	}
 
+	
 	&__link {
+		display: block;
+		color: #008698;
+		font-family: sans-serif;
+		font-family: "GBL", sans-serif;
+		font-size: 24px;
+		text-transform: uppercase;
+		padding-top: 45px;
+		max-width: 550px;
+		
+		@include media('<=sm') {
+			font-size: 20px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 18px;
+		}
+	}
+
+	/* &__link {
 		display: block;
 		color: #008698;
 		font-family: sans-serif;
@@ -145,5 +179,5 @@
 		@include media('<=sm') {
 			margin-top: -10px;
 		}
-	}
+	} */
 }

@@ -1,8 +1,9 @@
 .m-subscribe {
 	$self: &;
+	background: url('#{$images-path}subscribe-bg.png') center / cover no-repeat transparent;
+	padding: 110px 0;
 
 	&__inner {
-		margin-bottom: 70px;
 		display: flex;
 		justify-content: space-between;
 	
@@ -13,7 +14,7 @@
 
 	&__form {
 		max-width: 800px;
-		margin: 0 30px 60px 0;
+		margin: 0 30px 0 0;
 		
 		@include media('<=md') {
 			max-width: none;
@@ -23,10 +24,14 @@
 
 	&__title {
 		margin-bottom: 55px;
+		
+		&.title {
+			color: #fff;
+		}
 	}
 
 	&__side {
-		max-width: 480px;
+		max-width: 560px;
 		
 		@include media('<=md') {
 			display: flex;
@@ -41,26 +46,31 @@
 
 	&__side-block {
 		margin-bottom: 30px;
+		color: #fff;
 
 		h3 {
 			font-family: "RWBL", sans-serif;
-			font-size: 30px;
-			line-height: 1;
-			color: #112D32;
+			font-size: 36px;
+			line-height: 1.2;
+			color: #fff;
 			margin-bottom: 15px;
 			
 			@include media('<=md') {
-				font-size: 24px;
+				font-size: 30px;
 			}
 			
 			@include media('<=xxs') {
-				font-size: 20px;
+				font-size: 24px;
 			}
 		}
 
 		p {
 			line-height: 1.5;
-			font-size: 20px;
+			font-size: 24px;
+			
+			@include media('<=sm') {
+				font-size: 20px;
+			}
 			
 			@include media('<=xxs') {
 				font-size: 18px;

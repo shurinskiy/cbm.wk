@@ -3,7 +3,7 @@
 	font-family: "RWBL", sans-serif;
 	font-size: 80px;
 	color: #112D32;
-	line-height: 1.0;
+	line-height: 1.2;
 
 	@include media('<=xxlg') {
 		font-size: 70px;
@@ -22,22 +22,35 @@
 	}
 
 	&_subtitle {
-		font-size: 36px;
+		font-size: 55px;
+		line-height: 1.1em;
 		
 		@include media('<=xxlg') {
-			font-size: 32px;
+			font-size: 50px;
 		}
 		
 		@include media('<=xlg') {
-			font-size: 28px;
+			font-size: 45px;
 		}
 
 		@include media('<=md') {
-			font-size: 24px;
+			font-size: 40px;
 		}
 
 		@include media('<=xxs') {
-			// font-size: 25px;
+			font-size: 30px;
+		}
+	}
+
+	&_small {
+		font-size: 36px;
+		
+		@include media('<=md') {
+			font-size: 30px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 26px;
 		}
 	}
 	

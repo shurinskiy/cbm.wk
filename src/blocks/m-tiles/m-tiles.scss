@@ -1,0 +1,70 @@
+.m-tiles {
+	$self: &;
+	margin-bottom: 20px;
+		
+	@include media('<=sm') {
+		margin-bottom: 40px;
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -70px;
+		
+		@include media('<=xxlg') {
+			margin: 0 -30px;
+		}
+		
+		@include media('<=lg') {
+			margin: 0 -20px;
+		}
+	}
+	
+	&__item {
+		padding-bottom: 40px;
+		border-bottom: 1px solid #C4C4C4;
+		margin: 0 70px 70px;
+		width: calc(99.9% / 12 * 6 - 140px);
+		
+		@include media('<=xxlg') {
+			margin: 0 30px 50px;
+			width: calc(99.9% / 12 * 6 - 60px);
+		}
+		
+		@include media('<=lg') {
+			margin: 0 20px 50px;
+			width: calc(99.9% / 12 * 6 - 40px);
+		}
+		
+		@include media('<=xs') {
+			margin: 0 20px 50px;
+			width: calc(99.9% / 12 * 12 - 40px);
+		}
+	}
+
+	&__title {
+		max-width: 670px;
+		margin-bottom: 100px;
+		color: #112D32;
+	}
+	
+	&__subtitle {
+		margin-bottom: 40px;
+
+		@include media('<=xs') {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__text {
+		font-size: 24px;
+
+		@include media('<=sm') {
+			font-size: 20px;
+		}
+
+		@include media('<=xxxs') {
+			font-size: 18px;
+		}
+	}
+}

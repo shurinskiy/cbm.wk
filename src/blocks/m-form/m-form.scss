@@ -3,7 +3,7 @@
 
 	&__field {
 		box-sizing: border-box;
-		border: 1px solid #000;
+		border: 1px solid #fff;
 		width: 100%;
 		margin-bottom: 20px;
 		min-height: 70px;
@@ -29,7 +29,7 @@
 		input, textarea {
 			@extend %reset-input;
 			width: 100%;
-			color: #000;
+			color: #fff;
 			font-size: 30px;
 			
 			@include media('<=sm') {
@@ -37,16 +37,12 @@
 			}
 				
 			&::placeholder {
-				color: #444;
+				color: #fff;
 			}
 		}
 	}
 
 	&__submit {
-		margin-top: 10px;
-
-		&.button {
-			background-color: #3E92A0;
-		}
+		margin-top: 40px;
 	}
 }

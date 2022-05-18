@@ -3,17 +3,17 @@
 	display: flex;
 
 	&__item {
-		width: 41px;
-		height: 41px;
+		width: 58px;
+		height: 58px;
 		margin-right: 25px;
-		border-radius: 5px;
+		border-radius: 50%;
 
 		&_fb {
-			background: url('#{$images-path}icons-sprite.svg#icon-fb-view-white') right 9px bottom / 19px 34px no-repeat #000;
+			background: url('#{$images-path}icons-sprite.svg#icon-fb-view-white') center / 19px 34px no-repeat #000;
 		}
 		
 		&_in {
-			background: url('#{$images-path}icons-sprite.svg#icon-soc-linked-view-white') center bottom 8px / 26px 25px no-repeat #000;
+			background: url('#{$images-path}icons-sprite.svg#icon-soc-linked-view-white') center top 12px / 32px 29px no-repeat #000;
 		}
 		
 		&_tw {
