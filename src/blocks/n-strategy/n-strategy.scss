@@ -103,13 +103,15 @@
 	&__image {
 		max-width: 690px;
 		margin: -600px -6% 0 auto;
+		position: relative;
+		z-index: 1;
 		
 		@include media('<=xxlg') {
 			margin: -500px -2% 0 auto;
-			max-width: 520px;
+			max-width: 570px;
 		}
 		
-		@include media('<=md') {
+		@include media('<=xlg') {
 			display: none !important;
 		}
 	}

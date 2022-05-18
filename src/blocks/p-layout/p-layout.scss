@@ -2,7 +2,7 @@
 	$self: &;
 
 	&_materials {
-		margin-bottom: 80px;
+		margin-bottom: 110px;
 	}
 
 	&_shift-1 {
@@ -228,6 +228,13 @@
 			@include media('<=lg') {
 				display: none;
 			}
+		}
+
+		&_decor-9::after {
+			display: block;
+			right: 12%;
+			top: auto;
+			bottom: -200px;
 		}
 			
 		@include media('<=xxxlg') {
