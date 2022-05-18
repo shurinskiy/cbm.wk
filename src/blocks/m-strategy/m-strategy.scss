@@ -34,16 +34,16 @@
 	}
 
 	&__image {
-		max-width: 520px;
+		max-width: 600px;
 		margin-left: -15%;
-		margin-bottom: -300px;
+		margin-bottom: -400px;
 		
 		@include media('<=xxxlg') {
 			margin-left: -7%;
 		}
 		
 		@include media('<=xxlg') {
-			max-width: 420px;
+			max-width: 550px;
 			margin-left: -50px;
 			margin-bottom: -230px;
 		}
@@ -101,9 +101,17 @@
 		display: block;
 		color: #008698;
 		font-family: sans-serif;
-		font-family: "MBL", sans-serif;
-		font-size: 15px;
+		font-family: "GBL", sans-serif;
+		font-size: 24px;
 		text-transform: uppercase;
 		padding-top: 45px;
+				
+		@include media('<=sm') {
+			font-size: 20px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 18px;
+		}
 	}
 }

@@ -1,8 +1,17 @@
 .p-layout {
 	$self: &;
 
+	&_equal {
+		
+	}
+
+
 	&_materials {
 		margin-bottom: 80px;
+	}
+
+	&_shift-1 {
+		margin-top: -140px;
 	}
 
 	&_decor-1 {
@@ -42,7 +51,11 @@
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 70px;
-
+		
+		&_no-bottom {
+			margin-bottom: 0;
+		}
+	
 		@include media('<=sm') {
 			margin-bottom: 0;
 		}
@@ -184,6 +197,24 @@
 			right: 50%;
 			top: auto;
 			bottom: -150px;
+		}
+
+		&_decor-7::after {
+			display: block;
+			right: 50px;
+			top: -210px;
+		}
+
+		&_decor-8::after {
+			display: block;
+			z-index: 1;
+			right: 320px;
+			top: -130px;
+			background-image: url('#{$images-path}section-bg-3.png');
+
+			@include media('<=lg') {
+				display: none;
+			}
 		}
 			
 		@include media('<=xxxlg') {

@@ -33,20 +33,56 @@
 	}
 
 	&__title {
-		margin-bottom: 40px;
 		position: relative;
 		z-index: 1;
-
+		margin-bottom: 50px;
+		
 		&_wide {
-			margin: 0 -150px 40px 0;
-
+			margin: 0 -150px 0 0;
+			
 			@include media("<=sm") {
-				margin: 0 0 40px 0;
+				margin: 0;
 			}
 		}
-
+		
 		@include media("<=sm") {
+			margin-bottom: 30px;
 			max-width: 500px;
+		}
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -70px;
+		
+		@include media('<=xxlg') {
+			margin: 0 -30px;
+		}
+		
+		@include media('<=lg') {
+			margin: 0 -20px;
+		}
+	}
+	
+	&__item {
+		padding-bottom: 40px;
+		margin: 0 70px 70px;
+		width: calc(99.9% / 12 * 6 - 140px);
+		
+		@include media('<=xxlg') {
+			margin: 0 30px 50px;
+			width: calc(99.9% / 12 * 6 - 60px);
+		}
+		
+		@include media('<=lg') {
+			margin: 0 20px 50px;
+			width: calc(99.9% / 12 * 6 - 40px);
+		}
+		
+		@include media('<=md') {
+			margin: 0 20px 50px;
+			width: calc(99.9% / 12 * 12 - 40px);
 		}
 	}
 
